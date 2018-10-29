@@ -1,0 +1,18 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item {
+    margin: 10px !important;
+}
+
+#map {
+    height: 100ch;
+    width: 100%;
+}
+
+#choose-color {
+    width: 60%;
+    height: 30px;
+}

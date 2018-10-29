@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trajectory Data Analysis</title>
+
+    <!-- YandexMaps -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5a78acb6-529d-4067-a8ea-cbb1be5b431c&lang=en_US" type="text/javascript"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.0.2/sumoselect.min.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div class="row">
+        <div class="col-sm-10">
+            <div id="map"></div>
+        </div>
+        <div class="col-sm-2">
+
+
+            <div class="row"><input class="menu-item" type="file" id="data-input" multiple></div>
+            <div class="row"><select class="menu-item select-files" id="select-files" multiple></select></div>
+            <div class="row"><input class="menu-item" id="choose-color" type="color"></div>
+
+
+            <div class="w3-container row">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-black">İşlem Seç</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <a id="set-map" class="w3-bar-item w3-button">Set Map</a>
+                        <a id="reset-map" class="w3-bar-item w3-button">Reset Map</a>
+                        <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#reduction-modal">Reduction</a>
+                        <a id="dtw" class="w3-bar-item w3-button">DTW</a>
+                        <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#lcss-modal">LCSS</a>
+                        <a id="delete-path" class="w3-bar-item w3-button">Delete</a>
+                        <a id="new-path" class="w3-bar-item w3-button">Save New Path</a>
+                    </div>
+                </div>
+            </div>
+      
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="w3-container w3-green w3-round-xxlarge">
+                    <h2 id="sonuc" style="text-shadow:1px 1px 0 #444"></h2>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        
+            <div class="row input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Latiude</span>
+              </div>
+              <input id="latitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="row input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Longitude</span>
+              </div>
+              <input id="longitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="row"><button id="show-coordinat" class="btn btn-primary menu-item">Show Coordinat</button></div>
+            
+        </div>
+    </div>
+
+
+    <!-- Reduction Modal -->
+    <div class="modal fade" id="reduction-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Reduction</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Tolerance</span>
+                        </div>
+                        <input id="tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="reduction" class="btn btn-primary" data-dismiss="modal">Reduce</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="lcss-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">LCSS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Sigma</span>
+                        </div>
+                        <input id="sigma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="row input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Gamma</span>
+                        </div>
+                        <input id="gamma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="lcss" class="btn btn-primary" data-dismiss="modal">Compute</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.0.2/jquery.sumoselect.min.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="./socket.io/socket.io.js"></script>
+</body>
+</html>

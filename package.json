@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dtw": "0.0.3",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.6.8",
+    "pandas-js": "^0.2.4",
+    "socket.io": "^2.1.1",
+    "xlsx": "^0.14.0"
+  }
+}
