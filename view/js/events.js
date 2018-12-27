@@ -1,13 +1,13 @@
-
+var myMap
+var latlong = []
+var points = {}
+var point1, point2, square = {}
+var newPath = []
 $(document).ready(function(){
     //// IMPORTS
-    const socket = io.connect('http://localhost:1453')
+    const socket = io.connect('http://localhost:60000')
     
     //// VARIABLES
-    var myMap
-    var latlong = []
-    var point1, point2, square = {}
-    var newPath = []
 
     //// START
     ymaps.ready(init)
@@ -94,6 +94,45 @@ $(document).ready(function(){
         newPath = []
     })
 
+    $('#car-count').click(function(){
+        $('#car-count-modal').modal('show')
+    })
+
+    $('#car-count-submit').click(function(){
+        $('#car-count-modal').modal('hide')
+        beginTime = document.getElementById('begin-time').value
+        endTime = document.getElementById('end-time').value
+        maxTime = document.getElementById('max-time').value
+        disTol = parseFloat(document.getElementById('distance-tolerance').value)
+        console.log(beginTime, endTime, maxTime)
+
+        addCircle(points.p1, 140000*disTol)
+        addCircle(points.p2, 140000*disTol)
+
+        var fi = $('.select-files').val()
+        pathes = []
+        voyageCount = 0
+        for(i in fi){
+            temp = carcount(latlong[fi[i]], points.p1, points.p2, beginTime, endTime, maxTime, disTol)
+            if(temp.count != 0){
+                pathes.push(temp.path)
+                voyageCount += temp.count
+            }
+        }
+        document.getElementById('sonuc').innerText = 'Voyage Count: ' + voyageCount
+
+        for(i in pathes){
+            addPolyline(pathes[i], "#ff0000")
+        }
+        
+    })
+
+    $('#show-coordinat').click(function(){
+        lat = document.getElementById('latitude').value
+        long = document.getElementById('longitude').value
+        addMark([lat, long], 'Show Coordinat')
+    })
+
     function readFiles(files){
         $('#select-files').children().remove()
         $('.select-files')[0].sumo.reload()
@@ -120,18 +159,24 @@ $(document).ready(function(){
         })
 
         myMap.events.add(['click', 'contextmenu'], function (e) {
-
+            point = e.get('coords')
+            document.getElementById('latitude').value = point[0]
+            document.getElementById('longitude').value = point[1]
             if(e.get('type') == 'click'){
-                console.log('patha girdi')
-                newPath.push(e.get('coords'))
+                d = new Date().toISOString()
+                console.log('path oluşturuluyor')
+                addMark(point, 'New Path Node')
+                newPath.push({ll: point, date: d.slice(0, 10), time: d.slice(11, 22)})
             }
             else if(point1 == undefined){
                 console.log('rectangle ya girdi')
-                point1 = e.get('coords');
-                addMark(point1, 'Rectangle')
+                point1 = point;
+                addMark(point1, 'Mark')
             }
             else {
-                point2 = e.get('coords');
+                point2 = point
+                addMark(point2, 'Mark')
+                //addRectangle([point1, point2])
                 if(point1[0] < point2[0]){
                     square.left = point1[0]
                     square.right = point2[0]
@@ -148,7 +193,8 @@ $(document).ready(function(){
                     square.bottom = point2[1]
                     square.top = point1[1]
                 }
-                addRectangle([point1, point2])
+                points.p1 = point1
+                points.p2 = point2
                 point1 = undefined
             }
             
@@ -168,6 +214,11 @@ $(document).ready(function(){
             }
           })
           myMap.geoObjects.add(myRectangle)
+    }
+
+    function addCircle(ll, radius){
+        var myCircle = new ymaps.Circle([ll, radius])
+        myMap.geoObjects.add(myCircle)
     }
     
     function addPolyline(lldata, color){
@@ -501,5 +552,74 @@ $(document).ready(function(){
             }
         }
         return subPath
+    }
+
+    function carcount(path, beginCoords, endCoords, beginTime, endTime, maxTime, disTol){
+
+        possibleBeginPoints = []
+        possibleEndPoints = []
+        beginNearest = {proximity:disTol}
+        endNearest = {proximity:disTol}
+        for(i in path){
+            if(beginNearest.proximity > distance(beginCoords, path[i])){
+                beginNearest.point = path[i]
+                beginNearest.proximity = distance(beginCoords, path[i])
+            }
+            else if(beginNearest.proximity != disTol){
+                possibleBeginPoints.push(beginNearest.point)
+                beginNearest.proximity = disTol
+            }
+            else if(endNearest.proximity > distance(endCoords, path[i])){
+                endNearest.point = path[i]
+                endNearest.proximity = distance(endCoords, path[i])
+                if(i == path.length -1){
+                    possibleEndPoints.push(endNearest.point)
+                }
+            }
+            else if(endNearest.proximity != disTol){
+                possibleEndPoints.push(endNearest.point)
+                endNearest.proximity = disTol
+            }
+        }
+
+        console.log('possibleBeginPoints: ', possibleBeginPoints)
+        console.log('possibleEndPoints: ', possibleEndPoints)
+
+        voyages = []
+        for(i in possibleEndPoints){
+            lastBeginPoint = undefined
+            for(j in possibleBeginPoints){
+                if(possibleBeginPoints[j][2] + possibleBeginPoints[j][3] < possibleEndPoints[i][2] + possibleEndPoints[i][3]){
+                    //console.log(possibleBeginPoints[j][3] + ' < ' + possibleEndPoints[i][3])
+                    lastBeginPoint = j
+                }
+                else{
+                    //console.log(possibleBeginPoints[j][3] + ' > ' + possibleEndPoints[i][3])
+                    break
+                }
+            }
+            if(lastBeginPoint != undefined){
+                voyages.push({start: possibleBeginPoints[lastBeginPoint], end: possibleEndPoints[i]})
+                //console.log(possibleBeginPoints)
+                lastBeginPoint++
+                possibleBeginPoints = possibleBeginPoints.slice(lastBeginPoint, possibleBeginPoints.length)
+                //console.log(possibleBeginPoints)
+            }
+        }
+
+        for(i in voyages){
+            if((beginTime > voyages[i].start[3]) || (voyages[i].start[3] > endTime) || ((Number(maxTime.split(':')[0])*60*60*1000 + Number(maxTime.split(':')[1])*60*1000) < ((new Date(voyages[i].end[2] + 'T' + voyages[i].end[3])) - (new Date(voyages[i].start[2] + 'T' + voyages[i].start[3]))))){
+                print('zamanı aşıyor', i)
+                voyages.splice(i, 1)
+            }
+        }
+        console.log('voyages: ', voyages)
+
+        return {count: voyages.length, path: path}
+
+    }
+
+    function distance(p1, p2){
+        return Math.sqrt(Math.pow((p1[0]-p2[0]), 2) + Math.pow((p1[1] - p2[1]), 2))
     }
 })

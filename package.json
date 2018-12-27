@@ -7,7 +7,7 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ilyas Mammadov",
   "license": "ISC",
   "dependencies": {
     "dtw": "0.0.3",

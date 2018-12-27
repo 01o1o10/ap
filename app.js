@@ -6,7 +6,7 @@ const fs = require('fs');
 
 app.use(express.static(__dirname + '/view'))
 
-server.listen(1453)
+server.listen(60000)
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html')
@@ -14,22 +14,21 @@ app.get('/', function (req, res) {
 
 io.on('connection', function (socket) {
 
-  socket.on('read-file', function(fileName){
+  	socket.on('read-file', function(fileName){
 
-    path = "/home/ilyas/Desktop/ap/project/view/Trajectory/" + fileName
+    path = "view/Trajectory/" + fileName
 
 		fs.readFile(path, "utf8", function (err, data) {
       
       var latlong = []
 
 			if (err) {
-				alert('Error!!!');
 				console.log(err);
 			} else {
 				var ll = data.split("\n");
 				for(var i = 6; i < ll.length-1; i++){
 					var dizi = ll[i].split(",");
-					latlong.push([parseFloat(dizi[0]), parseFloat(dizi[1])]);
+					latlong.push([parseFloat(dizi[0]), parseFloat(dizi[1]), dizi[5], dizi[6]]);
 				}
       }
       console.log(latlong[1])
@@ -42,7 +41,7 @@ io.on('connection', function (socket) {
 
 		var content = ""
 		for(i = 0; i < newPath.length; i++){
-			content += newPath[i][0] + ',' + newPath[i][1]+ '\n'
+			content += newPath[i].ll[0] + ',' + newPath[i].ll[1] + ',un2,un3,un4,' + newPath[i].date + ',' + newPath[i].time + '\n'
 		}
 		
 		var d = (new Date()).toISOString()

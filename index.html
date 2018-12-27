@@ -48,6 +48,7 @@
                         <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#lcss-modal">LCSS</a>
                         <a id="delete-path" class="w3-bar-item w3-button">Delete</a>
                         <a id="new-path" class="w3-bar-item w3-button">Save New Path</a>
+                        <a id="car-count" class="w3-bar-item w3-button">Car Count</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- LCSS Modal -->
     <div class="modal fade" id="lcss-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -149,11 +150,55 @@
         </div>
     </div>
 
+    <!-- Car Count Modal -->
+    <div class="modal fade" id="car-count-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Car Count</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Begin Time</span>
+                            </div>
+                            <input id="begin-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="row input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">End Time</span>
+                            </div>
+                            <input id="end-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="row input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Max Time</span>
+                            </div>
+                            <input id="max-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="row input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Distance Tolerance</span>
+                            </div>
+                            <input id="distance-tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="car-count-submit" class="btn btn-primary" data-dismiss="modal">Find Car Count</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.0.2/jquery.sumoselect.min.js"></script>
     <script src="js/events.js"></script>
-    <script src="js/ui.js"></script>
     <script src="./socket.io/socket.io.js"></script>
 </body>
 </html>
