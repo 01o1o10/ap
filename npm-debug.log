@@ -1,0 +1,1287 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly idealTree:prePrune project@1.0.0
+20 silly idealTree:prePrune ├── accepts@1.3.5
+20 silly idealTree:prePrune ├── adler-32@1.2.0
+20 silly idealTree:prePrune ├── after@0.8.2
+20 silly idealTree:prePrune ├── array-flatten@1.1.1
+20 silly idealTree:prePrune ├── arraybuffer.slice@0.0.7
+20 silly idealTree:prePrune ├── async-limiter@1.0.0
+20 silly idealTree:prePrune ├── backo2@1.0.2
+20 silly idealTree:prePrune ├── base64-arraybuffer@0.1.5
+20 silly idealTree:prePrune ├── base64id@1.0.0
+20 silly idealTree:prePrune ├── better-assert@1.0.2
+20 silly idealTree:prePrune ├── bignumber.js@4.1.0
+20 silly idealTree:prePrune ├── blob@0.0.4
+20 silly idealTree:prePrune ├── body-parser@1.18.2
+20 silly idealTree:prePrune ├── bytes@3.0.0
+20 silly idealTree:prePrune ├── callsite@1.0.0
+20 silly idealTree:prePrune ├── cfb@1.1.0
+20 silly idealTree:prePrune ├─┬ codepage@1.14.0
+20 silly idealTree:prePrune │ └── commander@2.14.1
+20 silly idealTree:prePrune ├── commander@2.17.1
+20 silly idealTree:prePrune ├── component-bind@1.0.0
+20 silly idealTree:prePrune ├── component-emitter@1.2.1
+20 silly idealTree:prePrune ├── component-inherit@0.0.3
+20 silly idealTree:prePrune ├── content-disposition@0.5.2
+20 silly idealTree:prePrune ├── content-type@1.0.4
+20 silly idealTree:prePrune ├── cookie-signature@1.0.6
+20 silly idealTree:prePrune ├── cookie@0.3.1
+20 silly idealTree:prePrune ├── core-util-is@1.0.2
+20 silly idealTree:prePrune ├── crc-32@1.2.0
+20 silly idealTree:prePrune ├── debug@2.6.9
+20 silly idealTree:prePrune ├── depd@1.1.2
+20 silly idealTree:prePrune ├── destroy@1.0.4
+20 silly idealTree:prePrune ├── dtw@0.0.3
+20 silly idealTree:prePrune ├── ee-first@1.1.1
+20 silly idealTree:prePrune ├── encodeurl@1.0.2
+20 silly idealTree:prePrune ├─┬ engine.io-client@3.2.1
+20 silly idealTree:prePrune │ └── debug@3.1.0
+20 silly idealTree:prePrune ├── engine.io-parser@2.1.2
+20 silly idealTree:prePrune ├─┬ engine.io@3.2.0
+20 silly idealTree:prePrune │ └── debug@3.1.0
+20 silly idealTree:prePrune ├── escape-html@1.0.3
+20 silly idealTree:prePrune ├── etag@1.8.1
+20 silly idealTree:prePrune ├── exit-on-epipe@1.0.1
+20 silly idealTree:prePrune ├── express@4.16.3
+20 silly idealTree:prePrune ├── finalhandler@1.1.1
+20 silly idealTree:prePrune ├── forwarded@0.1.2
+20 silly idealTree:prePrune ├── frac@1.1.2
+20 silly idealTree:prePrune ├── fresh@0.5.2
+20 silly idealTree:prePrune ├── has-binary2@1.0.3
+20 silly idealTree:prePrune ├── has-cors@1.1.0
+20 silly idealTree:prePrune ├── http-errors@1.6.3
+20 silly idealTree:prePrune ├── iconv-lite@0.4.19
+20 silly idealTree:prePrune ├── immutable@3.8.2
+20 silly idealTree:prePrune ├── indexof@0.0.1
+20 silly idealTree:prePrune ├── inherits@2.0.3
+20 silly idealTree:prePrune ├── ipaddr.js@1.8.0
+20 silly idealTree:prePrune ├── isarray@2.0.1
+20 silly idealTree:prePrune ├── media-typer@0.3.0
+20 silly idealTree:prePrune ├── merge-descriptors@1.0.1
+20 silly idealTree:prePrune ├── methods@1.1.2
+20 silly idealTree:prePrune ├── mime-db@1.36.0
+20 silly idealTree:prePrune ├── mime-types@2.1.20
+20 silly idealTree:prePrune ├── mime@1.4.1
+20 silly idealTree:prePrune ├── ms@2.0.0
+20 silly idealTree:prePrune ├─┬ mysql@2.16.0
+20 silly idealTree:prePrune │ └── safe-buffer@5.1.2
+20 silly idealTree:prePrune ├── negotiator@0.6.1
+20 silly idealTree:prePrune ├── nodemailer@4.6.8
+20 silly idealTree:prePrune ├── object-component@0.0.3
+20 silly idealTree:prePrune ├── on-finished@2.3.0
+20 silly idealTree:prePrune ├── pandas-js@0.2.4
+20 silly idealTree:prePrune ├── parseqs@0.0.5
+20 silly idealTree:prePrune ├── parseuri@0.0.5
+20 silly idealTree:prePrune ├── parseurl@1.3.2
+20 silly idealTree:prePrune ├── path-to-regexp@0.1.7
+20 silly idealTree:prePrune ├── printj@1.1.2
+20 silly idealTree:prePrune ├── process-nextick-args@2.0.0
+20 silly idealTree:prePrune ├── proxy-addr@2.0.4
+20 silly idealTree:prePrune ├── qs@6.5.1
+20 silly idealTree:prePrune ├── range-parser@1.2.0
+20 silly idealTree:prePrune ├─┬ raw-body@2.3.2
+20 silly idealTree:prePrune │ ├── depd@1.1.1
+20 silly idealTree:prePrune │ ├── http-errors@1.6.2
+20 silly idealTree:prePrune │ └── setprototypeof@1.0.3
+20 silly idealTree:prePrune ├─┬ readable-stream@2.3.6
+20 silly idealTree:prePrune │ └── isarray@1.0.0
+20 silly idealTree:prePrune ├── safe-buffer@5.1.1
+20 silly idealTree:prePrune ├── send@0.16.2
+20 silly idealTree:prePrune ├── serve-static@1.13.2
+20 silly idealTree:prePrune ├── setprototypeof@1.1.0
+20 silly idealTree:prePrune ├── socket.io-adapter@1.1.1
+20 silly idealTree:prePrune ├─┬ socket.io-client@2.1.1
+20 silly idealTree:prePrune │ └── debug@3.1.0
+20 silly idealTree:prePrune ├─┬ socket.io-parser@3.2.0
+20 silly idealTree:prePrune │ └── debug@3.1.0
+20 silly idealTree:prePrune ├─┬ socket.io@2.1.1
+20 silly idealTree:prePrune │ └── debug@3.1.0
+20 silly idealTree:prePrune ├── sqlstring@2.3.1
+20 silly idealTree:prePrune ├── ssf@0.10.2
+20 silly idealTree:prePrune ├── statuses@1.4.0
+20 silly idealTree:prePrune ├── string_decoder@1.1.1
+20 silly idealTree:prePrune ├── to-array@0.1.4
+20 silly idealTree:prePrune ├── type-is@1.6.16
+20 silly idealTree:prePrune ├── ultron@1.1.1
+20 silly idealTree:prePrune ├── unpipe@1.0.0
+20 silly idealTree:prePrune ├── util-deprecate@1.0.2
+20 silly idealTree:prePrune ├── utils-merge@1.0.1
+20 silly idealTree:prePrune ├── vary@1.1.2
+20 silly idealTree:prePrune ├── ws@3.3.3
+20 silly idealTree:prePrune ├── xlsx@0.14.0
+20 silly idealTree:prePrune ├── xmlhttprequest-ssl@1.5.5
+20 silly idealTree:prePrune └── yeast@0.1.2
+21 silly loadIdealTree Finishing
+22 silly currentTree project@1.0.0
+22 silly currentTree ├── accepts@1.3.5
+22 silly currentTree ├── adler-32@1.2.0
+22 silly currentTree ├── after@0.8.2
+22 silly currentTree ├── array-flatten@1.1.1
+22 silly currentTree ├── arraybuffer.slice@0.0.7
+22 silly currentTree ├── async-limiter@1.0.0
+22 silly currentTree ├── backo2@1.0.2
+22 silly currentTree ├── base64-arraybuffer@0.1.5
+22 silly currentTree ├── base64id@1.0.0
+22 silly currentTree ├── better-assert@1.0.2
+22 silly currentTree ├── bignumber.js@4.1.0
+22 silly currentTree ├── blob@0.0.4
+22 silly currentTree ├── body-parser@1.18.2
+22 silly currentTree ├── bytes@3.0.0
+22 silly currentTree ├── callsite@1.0.0
+22 silly currentTree ├── cfb@1.1.0
+22 silly currentTree ├─┬ codepage@1.14.0
+22 silly currentTree │ └── commander@2.14.1
+22 silly currentTree ├── commander@2.17.1
+22 silly currentTree ├── component-bind@1.0.0
+22 silly currentTree ├── component-emitter@1.2.1
+22 silly currentTree ├── component-inherit@0.0.3
+22 silly currentTree ├── content-disposition@0.5.2
+22 silly currentTree ├── content-type@1.0.4
+22 silly currentTree ├── cookie-signature@1.0.6
+22 silly currentTree ├── cookie@0.3.1
+22 silly currentTree ├── core-util-is@1.0.2
+22 silly currentTree ├── crc-32@1.2.0
+22 silly currentTree ├── debug@2.6.9
+22 silly currentTree ├── depd@1.1.2
+22 silly currentTree ├── destroy@1.0.4
+22 silly currentTree ├── dtw@0.0.3
+22 silly currentTree ├── ee-first@1.1.1
+22 silly currentTree ├── encodeurl@1.0.2
+22 silly currentTree ├─┬ engine.io-client@3.2.1
+22 silly currentTree │ └── debug@3.1.0
+22 silly currentTree ├── engine.io-parser@2.1.2
+22 silly currentTree ├─┬ engine.io@3.2.0
+22 silly currentTree │ └── debug@3.1.0
+22 silly currentTree ├── escape-html@1.0.3
+22 silly currentTree ├── etag@1.8.1
+22 silly currentTree ├── exit-on-epipe@1.0.1
+22 silly currentTree ├── express@4.16.3
+22 silly currentTree ├── finalhandler@1.1.1
+22 silly currentTree ├── forwarded@0.1.2
+22 silly currentTree ├── frac@1.1.2
+22 silly currentTree ├── fresh@0.5.2
+22 silly currentTree ├── has-binary2@1.0.3
+22 silly currentTree ├── has-cors@1.1.0
+22 silly currentTree ├── http-errors@1.6.3
+22 silly currentTree ├── iconv-lite@0.4.19
+22 silly currentTree ├── immutable@3.8.2
+22 silly currentTree ├── indexof@0.0.1
+22 silly currentTree ├── inherits@2.0.3
+22 silly currentTree ├── ipaddr.js@1.8.0
+22 silly currentTree ├── isarray@2.0.1
+22 silly currentTree ├── media-typer@0.3.0
+22 silly currentTree ├── merge-descriptors@1.0.1
+22 silly currentTree ├── methods@1.1.2
+22 silly currentTree ├── mime-db@1.36.0
+22 silly currentTree ├── mime-types@2.1.20
+22 silly currentTree ├── mime@1.4.1
+22 silly currentTree ├── ms@2.0.0
+22 silly currentTree ├─┬ mysql@2.16.0
+22 silly currentTree │ └── safe-buffer@5.1.2
+22 silly currentTree ├── negotiator@0.6.1
+22 silly currentTree ├── nodemailer@4.6.8
+22 silly currentTree ├── object-component@0.0.3
+22 silly currentTree ├── on-finished@2.3.0
+22 silly currentTree ├── pandas-js@0.2.4
+22 silly currentTree ├── parseqs@0.0.5
+22 silly currentTree ├── parseuri@0.0.5
+22 silly currentTree ├── parseurl@1.3.2
+22 silly currentTree ├── path-to-regexp@0.1.7
+22 silly currentTree ├── printj@1.1.2
+22 silly currentTree ├── process-nextick-args@2.0.0
+22 silly currentTree ├── proxy-addr@2.0.4
+22 silly currentTree ├── qs@6.5.1
+22 silly currentTree ├── range-parser@1.2.0
+22 silly currentTree ├─┬ raw-body@2.3.2
+22 silly currentTree │ ├── depd@1.1.1
+22 silly currentTree │ ├── http-errors@1.6.2
+22 silly currentTree │ └── setprototypeof@1.0.3
+22 silly currentTree ├─┬ readable-stream@2.3.6
+22 silly currentTree │ └── isarray@1.0.0
+22 silly currentTree ├── safe-buffer@5.1.1
+22 silly currentTree ├── send@0.16.2
+22 silly currentTree ├── serve-static@1.13.2
+22 silly currentTree ├── setprototypeof@1.1.0
+22 silly currentTree ├── socket.io-adapter@1.1.1
+22 silly currentTree ├─┬ socket.io-client@2.1.1
+22 silly currentTree │ └── debug@3.1.0
+22 silly currentTree ├─┬ socket.io-parser@3.2.0
+22 silly currentTree │ └── debug@3.1.0
+22 silly currentTree ├─┬ socket.io@2.1.1
+22 silly currentTree │ └── debug@3.1.0
+22 silly currentTree ├── sqlstring@2.3.1
+22 silly currentTree ├── ssf@0.10.2
+22 silly currentTree ├── statuses@1.4.0
+22 silly currentTree ├── string_decoder@1.1.1
+22 silly currentTree ├── to-array@0.1.4
+22 silly currentTree ├── type-is@1.6.16
+22 silly currentTree ├── ultron@1.1.1
+22 silly currentTree ├── unpipe@1.0.0
+22 silly currentTree ├── util-deprecate@1.0.2
+22 silly currentTree ├── utils-merge@1.0.1
+22 silly currentTree ├── vary@1.1.2
+22 silly currentTree ├── ws@3.3.3
+22 silly currentTree ├── xlsx@0.14.0
+22 silly currentTree ├── xmlhttprequest-ssl@1.5.5
+22 silly currentTree └── yeast@0.1.2
+23 silly idealTree project@1.0.0
+23 silly idealTree ├── accepts@1.3.5
+23 silly idealTree ├── adler-32@1.2.0
+23 silly idealTree ├── after@0.8.2
+23 silly idealTree ├── array-flatten@1.1.1
+23 silly idealTree ├── arraybuffer.slice@0.0.7
+23 silly idealTree ├── async-limiter@1.0.0
+23 silly idealTree ├── backo2@1.0.2
+23 silly idealTree ├── base64-arraybuffer@0.1.5
+23 silly idealTree ├── base64id@1.0.0
+23 silly idealTree ├── better-assert@1.0.2
+23 silly idealTree ├── bignumber.js@4.1.0
+23 silly idealTree ├── blob@0.0.4
+23 silly idealTree ├── body-parser@1.18.2
+23 silly idealTree ├── bytes@3.0.0
+23 silly idealTree ├── callsite@1.0.0
+23 silly idealTree ├── cfb@1.1.0
+23 silly idealTree ├─┬ codepage@1.14.0
+23 silly idealTree │ └── commander@2.14.1
+23 silly idealTree ├── commander@2.17.1
+23 silly idealTree ├── component-bind@1.0.0
+23 silly idealTree ├── component-emitter@1.2.1
+23 silly idealTree ├── component-inherit@0.0.3
+23 silly idealTree ├── content-disposition@0.5.2
+23 silly idealTree ├── content-type@1.0.4
+23 silly idealTree ├── cookie-signature@1.0.6
+23 silly idealTree ├── cookie@0.3.1
+23 silly idealTree ├── core-util-is@1.0.2
+23 silly idealTree ├── crc-32@1.2.0
+23 silly idealTree ├── debug@2.6.9
+23 silly idealTree ├── depd@1.1.2
+23 silly idealTree ├── destroy@1.0.4
+23 silly idealTree ├── dtw@0.0.3
+23 silly idealTree ├── ee-first@1.1.1
+23 silly idealTree ├── encodeurl@1.0.2
+23 silly idealTree ├─┬ engine.io-client@3.2.1
+23 silly idealTree │ └── debug@3.1.0
+23 silly idealTree ├── engine.io-parser@2.1.2
+23 silly idealTree ├─┬ engine.io@3.2.0
+23 silly idealTree │ └── debug@3.1.0
+23 silly idealTree ├── escape-html@1.0.3
+23 silly idealTree ├── etag@1.8.1
+23 silly idealTree ├── exit-on-epipe@1.0.1
+23 silly idealTree ├── express@4.16.3
+23 silly idealTree ├── finalhandler@1.1.1
+23 silly idealTree ├── forwarded@0.1.2
+23 silly idealTree ├── frac@1.1.2
+23 silly idealTree ├── fresh@0.5.2
+23 silly idealTree ├── has-binary2@1.0.3
+23 silly idealTree ├── has-cors@1.1.0
+23 silly idealTree ├── http-errors@1.6.3
+23 silly idealTree ├── iconv-lite@0.4.19
+23 silly idealTree ├── immutable@3.8.2
+23 silly idealTree ├── indexof@0.0.1
+23 silly idealTree ├── inherits@2.0.3
+23 silly idealTree ├── ipaddr.js@1.8.0
+23 silly idealTree ├── isarray@2.0.1
+23 silly idealTree ├── media-typer@0.3.0
+23 silly idealTree ├── merge-descriptors@1.0.1
+23 silly idealTree ├── methods@1.1.2
+23 silly idealTree ├── mime-db@1.36.0
+23 silly idealTree ├── mime-types@2.1.20
+23 silly idealTree ├── mime@1.4.1
+23 silly idealTree ├── ms@2.0.0
+23 silly idealTree ├─┬ mysql@2.16.0
+23 silly idealTree │ └── safe-buffer@5.1.2
+23 silly idealTree ├── negotiator@0.6.1
+23 silly idealTree ├── nodemailer@4.6.8
+23 silly idealTree ├── object-component@0.0.3
+23 silly idealTree ├── on-finished@2.3.0
+23 silly idealTree ├── pandas-js@0.2.4
+23 silly idealTree ├── parseqs@0.0.5
+23 silly idealTree ├── parseuri@0.0.5
+23 silly idealTree ├── parseurl@1.3.2
+23 silly idealTree ├── path-to-regexp@0.1.7
+23 silly idealTree ├── printj@1.1.2
+23 silly idealTree ├── process-nextick-args@2.0.0
+23 silly idealTree ├── proxy-addr@2.0.4
+23 silly idealTree ├── qs@6.5.1
+23 silly idealTree ├── range-parser@1.2.0
+23 silly idealTree ├─┬ raw-body@2.3.2
+23 silly idealTree │ ├── depd@1.1.1
+23 silly idealTree │ ├── http-errors@1.6.2
+23 silly idealTree │ └── setprototypeof@1.0.3
+23 silly idealTree ├─┬ readable-stream@2.3.6
+23 silly idealTree │ └── isarray@1.0.0
+23 silly idealTree ├── safe-buffer@5.1.1
+23 silly idealTree ├── send@0.16.2
+23 silly idealTree ├── serve-static@1.13.2
+23 silly idealTree ├── setprototypeof@1.1.0
+23 silly idealTree ├── socket.io-adapter@1.1.1
+23 silly idealTree ├─┬ socket.io-client@2.1.1
+23 silly idealTree │ └── debug@3.1.0
+23 silly idealTree ├─┬ socket.io-parser@3.2.0
+23 silly idealTree │ └── debug@3.1.0
+23 silly idealTree ├─┬ socket.io@2.1.1
+23 silly idealTree │ └── debug@3.1.0
+23 silly idealTree ├── sqlstring@2.3.1
+23 silly idealTree ├── ssf@0.10.2
+23 silly idealTree ├── statuses@1.4.0
+23 silly idealTree ├── string_decoder@1.1.1
+23 silly idealTree ├── to-array@0.1.4
+23 silly idealTree ├── type-is@1.6.16
+23 silly idealTree ├── ultron@1.1.1
+23 silly idealTree ├── unpipe@1.0.0
+23 silly idealTree ├── util-deprecate@1.0.2
+23 silly idealTree ├── utils-merge@1.0.1
+23 silly idealTree ├── vary@1.1.2
+23 silly idealTree ├── ws@3.3.3
+23 silly idealTree ├── xlsx@0.14.0
+23 silly idealTree ├── xmlhttprequest-ssl@1.5.5
+23 silly idealTree └── yeast@0.1.2
+24 silly generateActionsToTake Starting
+25 silly install generateActionsToTake
+26 silly generateActionsToTake Finishing
+27 silly diffTrees action count 7
+28 silly diffTrees update dtw@0.0.3
+29 silly diffTrees update express@4.16.3
+30 silly diffTrees update mysql@2.16.0
+31 silly diffTrees update nodemailer@4.6.8
+32 silly diffTrees update pandas-js@0.2.4
+33 silly diffTrees update socket.io@2.1.1
+34 silly diffTrees update xlsx@0.14.0
+35 silly decomposeActions action count 56
+36 silly decomposeActions fetch dtw@0.0.3
+37 silly decomposeActions extract dtw@0.0.3
+38 silly decomposeActions test dtw@0.0.3
+39 silly decomposeActions preinstall dtw@0.0.3
+40 silly decomposeActions build dtw@0.0.3
+41 silly decomposeActions install dtw@0.0.3
+42 silly decomposeActions postinstall dtw@0.0.3
+43 silly decomposeActions finalize dtw@0.0.3
+44 silly decomposeActions fetch express@4.16.3
+45 silly decomposeActions extract express@4.16.3
+46 silly decomposeActions test express@4.16.3
+47 silly decomposeActions preinstall express@4.16.3
+48 silly decomposeActions build express@4.16.3
+49 silly decomposeActions install express@4.16.3
+50 silly decomposeActions postinstall express@4.16.3
+51 silly decomposeActions finalize express@4.16.3
+52 silly decomposeActions fetch mysql@2.16.0
+53 silly decomposeActions extract mysql@2.16.0
+54 silly decomposeActions test mysql@2.16.0
+55 silly decomposeActions preinstall mysql@2.16.0
+56 silly decomposeActions build mysql@2.16.0
+57 silly decomposeActions install mysql@2.16.0
+58 silly decomposeActions postinstall mysql@2.16.0
+59 silly decomposeActions finalize mysql@2.16.0
+60 silly decomposeActions fetch nodemailer@4.6.8
+61 silly decomposeActions extract nodemailer@4.6.8
+62 silly decomposeActions test nodemailer@4.6.8
+63 silly decomposeActions preinstall nodemailer@4.6.8
+64 silly decomposeActions build nodemailer@4.6.8
+65 silly decomposeActions install nodemailer@4.6.8
+66 silly decomposeActions postinstall nodemailer@4.6.8
+67 silly decomposeActions finalize nodemailer@4.6.8
+68 silly decomposeActions fetch pandas-js@0.2.4
+69 silly decomposeActions extract pandas-js@0.2.4
+70 silly decomposeActions test pandas-js@0.2.4
+71 silly decomposeActions preinstall pandas-js@0.2.4
+72 silly decomposeActions build pandas-js@0.2.4
+73 silly decomposeActions install pandas-js@0.2.4
+74 silly decomposeActions postinstall pandas-js@0.2.4
+75 silly decomposeActions finalize pandas-js@0.2.4
+76 silly decomposeActions fetch socket.io@2.1.1
+77 silly decomposeActions extract socket.io@2.1.1
+78 silly decomposeActions test socket.io@2.1.1
+79 silly decomposeActions preinstall socket.io@2.1.1
+80 silly decomposeActions build socket.io@2.1.1
+81 silly decomposeActions install socket.io@2.1.1
+82 silly decomposeActions postinstall socket.io@2.1.1
+83 silly decomposeActions finalize socket.io@2.1.1
+84 silly decomposeActions fetch xlsx@0.14.0
+85 silly decomposeActions extract xlsx@0.14.0
+86 silly decomposeActions test xlsx@0.14.0
+87 silly decomposeActions preinstall xlsx@0.14.0
+88 silly decomposeActions build xlsx@0.14.0
+89 silly decomposeActions install xlsx@0.14.0
+90 silly decomposeActions postinstall xlsx@0.14.0
+91 silly decomposeActions finalize xlsx@0.14.0
+92 silly executeActions Starting
+93 silly install executeActions
+94 silly doSerial global-install 0
+95 silly doParallel fetch 7
+96 verbose lock using /home/ilyas/.npm/_locks/staging-822ea5919ac265d7.lock for /home/ilyas/works/ap/jsproject/node_modules/.staging
+97 silly doParallel extract 7
+98 silly extract dtw@0.0.3
+99 silly extract express@4.16.3
+100 silly extract mysql@2.16.0
+101 silly extract nodemailer@4.6.8
+102 silly extract pandas-js@0.2.4
+103 silly extract socket.io@2.1.1
+104 silly extract xlsx@0.14.0
+105 silly addNamed dtw@0.0.3
+106 verbose addNamed "0.0.3" is a plain semver version for dtw
+107 silly mapToRegistry name dtw
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry uri https://registry.npmjs.org/dtw
+111 verbose addNameVersion registry:https://registry.npmjs.org/dtw not in flight; fetching
+112 silly addNamed socket.io@2.1.1
+113 verbose addNamed "2.1.1" is a plain semver version for socket.io
+114 silly mapToRegistry name socket.io
+115 silly mapToRegistry using default registry
+116 silly mapToRegistry registry https://registry.npmjs.org/
+117 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+118 verbose addNameVersion registry:https://registry.npmjs.org/socket.io not in flight; fetching
+119 silly addNamed xlsx@0.14.0
+120 verbose addNamed "0.14.0" is a plain semver version for xlsx
+121 silly mapToRegistry name xlsx
+122 silly mapToRegistry using default registry
+123 silly mapToRegistry registry https://registry.npmjs.org/
+124 silly mapToRegistry uri https://registry.npmjs.org/xlsx
+125 verbose addNameVersion registry:https://registry.npmjs.org/xlsx not in flight; fetching
+126 silly addNamed express@4.16.3
+127 verbose addNamed "4.16.3" is a plain semver version for express
+128 silly mapToRegistry name express
+129 silly mapToRegistry using default registry
+130 silly mapToRegistry registry https://registry.npmjs.org/
+131 silly mapToRegistry uri https://registry.npmjs.org/express
+132 verbose addNameVersion registry:https://registry.npmjs.org/express not in flight; fetching
+133 verbose unbuild node_modules/.staging/pandas-js-0b99fc92
+134 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92 is being purged from base /home/ilyas/works/ap/jsproject
+135 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92
+136 verbose tar unpack /home/ilyas/.npm/pandas-js/0.2.4/package.tgz
+137 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92
+138 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92 is being purged
+139 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92
+140 verbose unbuild node_modules/.staging/mysql-75a94cfa
+141 silly gunzTarPerm modes [ '775', '664' ]
+142 verbose request uri https://registry.npmjs.org/socket.io
+143 verbose request no auth needed
+144 info attempt registry request try #1 at 2:44:20 AM
+145 verbose request id b0d089ec259ae295
+146 verbose etag W/"7e41eda8b757ab8db27a6dd20e33fed4"
+147 verbose lastModified Wed, 28 Nov 2018 23:16:16 GMT
+148 http request GET https://registry.npmjs.org/socket.io
+149 verbose request uri https://registry.npmjs.org/express
+150 verbose request no auth needed
+151 info attempt registry request try #1 at 2:44:20 AM
+152 verbose etag W/"307c201a73c85a472b7341c05f29d099"
+153 verbose lastModified Thu, 06 Dec 2018 09:37:12 GMT
+154 http request GET https://registry.npmjs.org/express
+155 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa is being purged from base /home/ilyas/works/ap/jsproject
+156 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa
+157 verbose tar unpack /home/ilyas/.npm/mysql/2.16.0/package.tgz
+158 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa
+159 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa is being purged
+160 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa
+161 verbose request uri https://registry.npmjs.org/dtw
+162 verbose request no auth needed
+163 info attempt registry request try #1 at 2:44:20 AM
+164 verbose etag W/"45770e60d634759edafba08f8a521007"
+165 verbose lastModified Sat, 26 May 2018 22:32:26 GMT
+166 http request GET https://registry.npmjs.org/dtw
+167 silly addNamed nodemailer@4.6.8
+168 verbose addNamed "4.6.8" is a plain semver version for nodemailer
+169 silly mapToRegistry name nodemailer
+170 silly mapToRegistry using default registry
+171 silly mapToRegistry registry https://registry.npmjs.org/
+172 silly mapToRegistry uri https://registry.npmjs.org/nodemailer
+173 verbose addNameVersion registry:https://registry.npmjs.org/nodemailer not in flight; fetching
+174 verbose request uri https://registry.npmjs.org/xlsx
+175 verbose request no auth needed
+176 info attempt registry request try #1 at 2:44:20 AM
+177 verbose etag W/"066879e224c11bec44f9702212365e28"
+178 verbose lastModified Sun, 25 Nov 2018 21:24:49 GMT
+179 http request GET https://registry.npmjs.org/xlsx
+180 silly gunzTarPerm modes [ '775', '664' ]
+181 silly gunzTarPerm extractEntry package.json
+182 silly gunzTarPerm extractEntry README.md
+183 silly gunzTarPerm extractEntry LICENSE
+184 silly gunzTarPerm extractEntry CHANGELOG.md
+185 silly gunzTarPerm extractEntry dist/index.js
+186 silly gunzTarPerm extractEntry dist/__tests__/core/dtype.js
+187 silly gunzTarPerm extractEntry dist/__tests__/core/frame.js
+188 silly gunzTarPerm extractEntry dist/__tests__/core/multiindex.js
+189 silly gunzTarPerm extractEntry dist/__tests__/core/series.js
+190 silly gunzTarPerm extractEntry dist/__tests__/core/utils.js
+191 silly gunzTarPerm extractEntry dist/__tests__/core/reshape/concat.js
+192 silly gunzTarPerm extractEntry dist/__tests__/tseries/tools.js
+193 silly gunzTarPerm extractEntry dist/core/dtype.js
+194 silly gunzTarPerm extractEntry dist/core/exceptions.js
+195 silly gunzTarPerm extractEntry dist/core/frame.js
+196 silly gunzTarPerm extractEntry dist/core/generic.js
+197 silly gunzTarPerm extractEntry dist/core/index.js
+198 silly gunzTarPerm extractEntry dist/core/multiindex.js
+199 silly gunzTarPerm extractEntry dist/core/series.js
+200 silly gunzTarPerm extractEntry dist/core/structs.js
+201 silly gunzTarPerm extractEntry dist/core/utils.js
+202 silly gunzTarPerm extractEntry dist/core/reshape/concat.js
+203 silly gunzTarPerm extractEntry dist/io/parsers.js
+204 silly gunzTarPerm extractEntry dist/tseries/tools.js
+205 silly gunzTarPerm extractEntry src/es6/index.js
+206 silly gunzTarPerm extractEntry package.json
+207 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+208 silly gunzTarPerm extractEntry src/es6/.eslintrc
+209 silly gunzTarPerm extractEntry src/es6/__tests__/core/dtype.js
+210 verbose request uri https://registry.npmjs.org/nodemailer
+211 verbose request no auth needed
+212 info attempt registry request try #1 at 2:44:21 AM
+213 verbose etag W/"8580a34a3249bd8e65bf00bb519323f0"
+214 verbose lastModified Mon, 19 Nov 2018 12:27:08 GMT
+215 http request GET https://registry.npmjs.org/nodemailer
+216 silly gunzTarPerm extractEntry Changes.md
+217 silly gunzTarPerm modified mode [ 'Changes.md', 420, 436 ]
+218 silly gunzTarPerm extractEntry index.js
+219 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+220 silly gunzTarPerm extractEntry src/es6/__tests__/core/frame.js
+221 silly gunzTarPerm extractEntry src/es6/__tests__/core/multiindex.js
+222 silly gunzTarPerm extractEntry License
+223 silly gunzTarPerm modified mode [ 'License', 420, 436 ]
+224 silly gunzTarPerm extractEntry Readme.md
+225 silly gunzTarPerm modified mode [ 'Readme.md', 420, 436 ]
+226 silly gunzTarPerm extractEntry lib/Connection.js
+227 silly gunzTarPerm modified mode [ 'lib/Connection.js', 420, 436 ]
+228 silly gunzTarPerm extractEntry lib/ConnectionConfig.js
+229 silly gunzTarPerm modified mode [ 'lib/ConnectionConfig.js', 420, 436 ]
+230 silly gunzTarPerm extractEntry lib/Pool.js
+231 silly gunzTarPerm modified mode [ 'lib/Pool.js', 420, 436 ]
+232 silly gunzTarPerm extractEntry lib/PoolCluster.js
+233 silly gunzTarPerm modified mode [ 'lib/PoolCluster.js', 420, 436 ]
+234 silly gunzTarPerm extractEntry lib/PoolConfig.js
+235 silly gunzTarPerm modified mode [ 'lib/PoolConfig.js', 420, 436 ]
+236 silly gunzTarPerm extractEntry lib/PoolConnection.js
+237 silly gunzTarPerm modified mode [ 'lib/PoolConnection.js', 420, 436 ]
+238 silly gunzTarPerm extractEntry lib/PoolNamespace.js
+239 silly gunzTarPerm modified mode [ 'lib/PoolNamespace.js', 420, 436 ]
+240 silly gunzTarPerm extractEntry lib/PoolSelector.js
+241 silly gunzTarPerm modified mode [ 'lib/PoolSelector.js', 420, 436 ]
+242 silly gunzTarPerm extractEntry lib/protocol/Auth.js
+243 silly gunzTarPerm modified mode [ 'lib/protocol/Auth.js', 420, 436 ]
+244 silly gunzTarPerm extractEntry lib/protocol/BufferList.js
+245 silly gunzTarPerm modified mode [ 'lib/protocol/BufferList.js', 420, 436 ]
+246 silly gunzTarPerm extractEntry lib/protocol/constants/charsets.js
+247 silly gunzTarPerm modified mode [ 'lib/protocol/constants/charsets.js', 420, 436 ]
+248 silly gunzTarPerm extractEntry lib/protocol/constants/client.js
+249 silly gunzTarPerm modified mode [ 'lib/protocol/constants/client.js', 420, 436 ]
+250 silly gunzTarPerm extractEntry src/es6/__tests__/core/series.js
+251 silly gunzTarPerm extractEntry src/es6/__tests__/core/utils.js
+252 silly gunzTarPerm extractEntry lib/protocol/constants/errors.js
+253 silly gunzTarPerm modified mode [ 'lib/protocol/constants/errors.js', 420, 436 ]
+254 silly gunzTarPerm extractEntry lib/protocol/constants/field_flags.js
+255 silly gunzTarPerm modified mode [ 'lib/protocol/constants/field_flags.js', 420, 436 ]
+256 silly gunzTarPerm extractEntry src/es6/__tests__/core/reshape/concat.js
+257 silly gunzTarPerm extractEntry src/es6/__tests__/tseries/tools.js
+258 silly gunzTarPerm extractEntry lib/protocol/constants/server_status.js
+259 silly gunzTarPerm modified mode [ 'lib/protocol/constants/server_status.js', 420, 436 ]
+260 silly gunzTarPerm extractEntry lib/protocol/constants/ssl_profiles.js
+261 silly gunzTarPerm modified mode [ 'lib/protocol/constants/ssl_profiles.js', 420, 436 ]
+262 silly gunzTarPerm extractEntry lib/protocol/constants/types.js
+263 silly gunzTarPerm modified mode [ 'lib/protocol/constants/types.js', 420, 436 ]
+264 silly gunzTarPerm extractEntry lib/protocol/PacketHeader.js
+265 silly gunzTarPerm modified mode [ 'lib/protocol/PacketHeader.js', 420, 436 ]
+266 silly gunzTarPerm extractEntry lib/protocol/packets/AuthSwitchRequestPacket.js
+267 silly gunzTarPerm modified mode [ 'lib/protocol/packets/AuthSwitchRequestPacket.js', 420, 436 ]
+268 silly gunzTarPerm extractEntry lib/protocol/packets/AuthSwitchResponsePacket.js
+269 silly gunzTarPerm modified mode [ 'lib/protocol/packets/AuthSwitchResponsePacket.js', 420, 436 ]
+270 silly gunzTarPerm extractEntry lib/protocol/packets/ClientAuthenticationPacket.js
+271 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ClientAuthenticationPacket.js',
+271 silly gunzTarPerm   420,
+271 silly gunzTarPerm   436 ]
+272 silly gunzTarPerm extractEntry lib/protocol/packets/ComChangeUserPacket.js
+273 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ComChangeUserPacket.js', 420, 436 ]
+274 silly gunzTarPerm extractEntry lib/protocol/packets/ComPingPacket.js
+275 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ComPingPacket.js', 420, 436 ]
+276 silly gunzTarPerm extractEntry lib/protocol/packets/ComQueryPacket.js
+277 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ComQueryPacket.js', 420, 436 ]
+278 silly gunzTarPerm extractEntry lib/protocol/packets/ComQuitPacket.js
+279 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ComQuitPacket.js', 420, 436 ]
+280 silly gunzTarPerm extractEntry lib/protocol/packets/ComStatisticsPacket.js
+281 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ComStatisticsPacket.js', 420, 436 ]
+282 silly gunzTarPerm extractEntry lib/protocol/packets/EmptyPacket.js
+283 silly gunzTarPerm modified mode [ 'lib/protocol/packets/EmptyPacket.js', 420, 436 ]
+284 silly gunzTarPerm extractEntry lib/protocol/packets/EofPacket.js
+285 silly gunzTarPerm modified mode [ 'lib/protocol/packets/EofPacket.js', 420, 436 ]
+286 silly gunzTarPerm extractEntry lib/protocol/packets/ErrorPacket.js
+287 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ErrorPacket.js', 420, 436 ]
+288 silly gunzTarPerm extractEntry lib/protocol/packets/Field.js
+289 silly gunzTarPerm modified mode [ 'lib/protocol/packets/Field.js', 420, 436 ]
+290 silly gunzTarPerm extractEntry lib/protocol/packets/FieldPacket.js
+291 silly gunzTarPerm modified mode [ 'lib/protocol/packets/FieldPacket.js', 420, 436 ]
+292 silly gunzTarPerm extractEntry lib/protocol/packets/HandshakeInitializationPacket.js
+293 silly gunzTarPerm modified mode [ 'lib/protocol/packets/HandshakeInitializationPacket.js',
+293 silly gunzTarPerm   420,
+293 silly gunzTarPerm   436 ]
+294 silly gunzTarPerm extractEntry lib/protocol/packets/index.js
+295 silly gunzTarPerm modified mode [ 'lib/protocol/packets/index.js', 420, 436 ]
+296 silly gunzTarPerm extractEntry lib/protocol/packets/LocalDataFilePacket.js
+297 silly gunzTarPerm modified mode [ 'lib/protocol/packets/LocalDataFilePacket.js', 420, 436 ]
+298 silly gunzTarPerm extractEntry lib/protocol/packets/OkPacket.js
+299 silly gunzTarPerm modified mode [ 'lib/protocol/packets/OkPacket.js', 420, 436 ]
+300 silly gunzTarPerm extractEntry lib/protocol/packets/OldPasswordPacket.js
+301 silly gunzTarPerm modified mode [ 'lib/protocol/packets/OldPasswordPacket.js', 420, 436 ]
+302 silly gunzTarPerm extractEntry lib/protocol/packets/ResultSetHeaderPacket.js
+303 silly gunzTarPerm modified mode [ 'lib/protocol/packets/ResultSetHeaderPacket.js', 420, 436 ]
+304 silly gunzTarPerm extractEntry lib/protocol/packets/RowDataPacket.js
+305 silly gunzTarPerm modified mode [ 'lib/protocol/packets/RowDataPacket.js', 420, 436 ]
+306 silly gunzTarPerm extractEntry lib/protocol/packets/SSLRequestPacket.js
+307 silly gunzTarPerm modified mode [ 'lib/protocol/packets/SSLRequestPacket.js', 420, 436 ]
+308 silly gunzTarPerm extractEntry lib/protocol/packets/StatisticsPacket.js
+309 silly gunzTarPerm modified mode [ 'lib/protocol/packets/StatisticsPacket.js', 420, 436 ]
+310 silly gunzTarPerm extractEntry lib/protocol/packets/UseOldPasswordPacket.js
+311 silly gunzTarPerm modified mode [ 'lib/protocol/packets/UseOldPasswordPacket.js', 420, 436 ]
+312 silly gunzTarPerm extractEntry lib/protocol/PacketWriter.js
+313 silly gunzTarPerm modified mode [ 'lib/protocol/PacketWriter.js', 420, 436 ]
+314 silly gunzTarPerm extractEntry lib/protocol/Parser.js
+315 silly gunzTarPerm modified mode [ 'lib/protocol/Parser.js', 420, 436 ]
+316 silly gunzTarPerm extractEntry lib/protocol/Protocol.js
+317 silly gunzTarPerm modified mode [ 'lib/protocol/Protocol.js', 420, 436 ]
+318 silly gunzTarPerm extractEntry lib/protocol/ResultSet.js
+319 silly gunzTarPerm modified mode [ 'lib/protocol/ResultSet.js', 420, 436 ]
+320 silly gunzTarPerm extractEntry lib/protocol/sequences/ChangeUser.js
+321 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/ChangeUser.js', 420, 436 ]
+322 silly gunzTarPerm extractEntry lib/protocol/sequences/Handshake.js
+323 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Handshake.js', 420, 436 ]
+324 silly gunzTarPerm extractEntry lib/protocol/sequences/index.js
+325 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/index.js', 420, 436 ]
+326 silly gunzTarPerm extractEntry lib/protocol/sequences/Ping.js
+327 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Ping.js', 420, 436 ]
+328 silly gunzTarPerm extractEntry lib/protocol/sequences/Query.js
+329 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Query.js', 420, 436 ]
+330 silly gunzTarPerm extractEntry lib/protocol/sequences/Quit.js
+331 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Quit.js', 420, 436 ]
+332 silly gunzTarPerm extractEntry lib/protocol/sequences/Sequence.js
+333 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Sequence.js', 420, 436 ]
+334 silly gunzTarPerm extractEntry lib/protocol/sequences/Statistics.js
+335 silly gunzTarPerm modified mode [ 'lib/protocol/sequences/Statistics.js', 420, 436 ]
+336 silly gunzTarPerm extractEntry lib/protocol/SqlString.js
+337 silly gunzTarPerm modified mode [ 'lib/protocol/SqlString.js', 420, 436 ]
+338 silly gunzTarPerm extractEntry lib/protocol/Timer.js
+339 silly gunzTarPerm modified mode [ 'lib/protocol/Timer.js', 420, 436 ]
+340 silly gunzTarPerm extractEntry src/es6/core/dtype.js
+341 silly gunzTarPerm extractEntry src/es6/core/exceptions.js
+342 silly gunzTarPerm extractEntry src/es6/core/frame.js
+343 silly gunzTarPerm extractEntry src/es6/core/generic.js
+344 silly gunzTarPerm extractEntry src/es6/core/index.js
+345 silly gunzTarPerm extractEntry src/es6/core/multiindex.js
+346 silly gunzTarPerm extractEntry src/es6/core/series.js
+347 silly gunzTarPerm extractEntry src/es6/core/structs.js
+348 silly gunzTarPerm extractEntry src/es6/core/utils.js
+349 silly gunzTarPerm extractEntry src/es6/core/reshape/concat.js
+350 silly gunzTarPerm extractEntry src/es6/io/parsers.js
+351 silly gunzTarPerm extractEntry src/es6/tseries/tools.js
+352 silly gunzTarPerm extractEntry src/js/index.js
+353 silly gunzTarPerm extractEntry src/js/__tests__/core/dtype.js
+354 silly gunzTarPerm extractEntry src/js/__tests__/core/frame.js
+355 silly gunzTarPerm extractEntry src/js/__tests__/core/multiindex.js
+356 silly gunzTarPerm extractEntry src/js/__tests__/core/series.js
+357 silly gunzTarPerm extractEntry src/js/__tests__/core/utils.js
+358 silly gunzTarPerm extractEntry src/js/__tests__/core/frame.js.map
+359 silly gunzTarPerm extractEntry src/js/__tests__/core/multiindex.js.map
+360 silly gunzTarPerm extractEntry src/js/__tests__/core/reshape/concat.js
+361 silly gunzTarPerm extractEntry src/js/__tests__/core/reshape/concat.js.map
+362 silly gunzTarPerm extractEntry src/js/__tests__/core/series.js.map
+363 silly gunzTarPerm extractEntry src/js/__tests__/tseries/tools.js
+364 silly gunzTarPerm extractEntry src/js/__tests__/tseries/tools.js.map
+365 silly gunzTarPerm extractEntry src/js/core/dtype.js
+366 silly gunzTarPerm extractEntry src/js/core/exceptions.js
+367 silly gunzTarPerm extractEntry src/js/core/frame.js
+368 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa/node_modules is being purged
+369 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa/node_modules
+370 silly gunzTarPerm extractEntry src/js/core/generic.js
+371 silly gunzTarPerm extractEntry src/js/core/index.js
+372 silly gunzTarPerm extractEntry src/js/core/multiindex.js
+373 silly gunzTarPerm extractEntry src/js/core/series.js
+374 silly gunzTarPerm extractEntry src/js/core/structs.js
+375 silly gunzTarPerm extractEntry src/js/core/utils.js
+376 silly gunzTarPerm extractEntry src/js/core/utils.js.map
+377 silly gunzTarPerm extractEntry src/js/core/multiindex.js.map
+378 silly gunzTarPerm extractEntry src/js/core/reshape/concat.js
+379 silly gunzTarPerm extractEntry src/js/core/reshape/concat.js.map
+380 silly gunzTarPerm extractEntry src/js/core/generic.js.map
+381 silly gunzTarPerm extractEntry src/js/core/series.js.map
+382 silly gunzTarPerm extractEntry src/js/core/frame.js.map
+383 silly gunzTarPerm extractEntry src/js/core/dtype.js.map
+384 silly gunzTarPerm extractEntry src/js/core/index.js.map
+385 silly gunzTarPerm extractEntry src/js/index.js.map
+386 silly gunzTarPerm extractEntry src/js/io/parsers.js
+387 silly gunzTarPerm extractEntry src/js/tseries/tools.js
+388 silly gunzTarPerm extractEntry src/js/tseries/tools.js.map
+389 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92/node_modules is being purged
+390 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92/node_modules
+391 http 304 https://registry.npmjs.org/socket.io
+392 verbose headers { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+392 verbose headers   connection: 'keep-alive',
+392 verbose headers   'set-cookie':
+392 verbose headers    [ '__cfduid=dc89d9acf13d1fe94227bec2871bdb2771546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+392 verbose headers   'cf-cache-status': 'REVALIDATED',
+392 verbose headers   'cache-control': 'max-age=300',
+392 verbose headers   'cf-ray': '4907e4f4bd76b037-IST',
+392 verbose headers   etag: '"7e41eda8b757ab8db27a6dd20e33fed4"',
+392 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+392 verbose headers   'last-modified': 'Wed, 28 Nov 2018 23:16:16 GMT',
+392 verbose headers   vary: 'accept-encoding, accept',
+392 verbose headers   'x-amz-meta-rev': '1144-ad030effa2041cb8d9a7d878ab69d13b',
+392 verbose headers   server: 'cloudflare' }
+393 silly get cb [ 304,
+393 silly get   { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+393 silly get     connection: 'keep-alive',
+393 silly get     'set-cookie':
+393 silly get      [ '__cfduid=dc89d9acf13d1fe94227bec2871bdb2771546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+393 silly get     'cf-cache-status': 'REVALIDATED',
+393 silly get     'cache-control': 'max-age=300',
+393 silly get     'cf-ray': '4907e4f4bd76b037-IST',
+393 silly get     etag: '"7e41eda8b757ab8db27a6dd20e33fed4"',
+393 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+393 silly get     'last-modified': 'Wed, 28 Nov 2018 23:16:16 GMT',
+393 silly get     vary: 'accept-encoding, accept',
+393 silly get     'x-amz-meta-rev': '1144-ad030effa2041cb8d9a7d878ab69d13b',
+393 silly get     server: 'cloudflare' } ]
+394 verbose etag https://registry.npmjs.org/socket.io from cache
+395 verbose get saving socket.io to /home/ilyas/.npm/registry.npmjs.org/socket.io/.cache.json
+396 http 304 https://registry.npmjs.org/dtw
+397 verbose headers { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+397 verbose headers   connection: 'keep-alive',
+397 verbose headers   'set-cookie':
+397 verbose headers    [ '__cfduid=d3cc55bd24da75fbc936e08aef6bf58771546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+397 verbose headers   'cf-cache-status': 'MISS',
+397 verbose headers   'cache-control': 'max-age=300',
+397 verbose headers   'cf-ray': '4907e4f4ad85a7be-IST',
+397 verbose headers   etag: '"45770e60d634759edafba08f8a521007"',
+397 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+397 verbose headers   'last-modified': 'Sat, 26 May 2018 22:32:26 GMT',
+397 verbose headers   vary: 'accept-encoding, accept',
+397 verbose headers   server: 'cloudflare' }
+398 silly get cb [ 304,
+398 silly get   { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+398 silly get     connection: 'keep-alive',
+398 silly get     'set-cookie':
+398 silly get      [ '__cfduid=d3cc55bd24da75fbc936e08aef6bf58771546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+398 silly get     'cf-cache-status': 'MISS',
+398 silly get     'cache-control': 'max-age=300',
+398 silly get     'cf-ray': '4907e4f4ad85a7be-IST',
+398 silly get     etag: '"45770e60d634759edafba08f8a521007"',
+398 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+398 silly get     'last-modified': 'Sat, 26 May 2018 22:32:26 GMT',
+398 silly get     vary: 'accept-encoding, accept',
+398 silly get     server: 'cloudflare' } ]
+399 verbose etag https://registry.npmjs.org/dtw from cache
+400 verbose get saving dtw to /home/ilyas/.npm/registry.npmjs.org/dtw/.cache.json
+401 http 304 https://registry.npmjs.org/xlsx
+402 verbose headers { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+402 verbose headers   connection: 'keep-alive',
+402 verbose headers   'set-cookie':
+402 verbose headers    [ '__cfduid=d54726e5cdf528eeb751ffeb08d8baa9b1546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+402 verbose headers   'cf-cache-status': 'REVALIDATED',
+402 verbose headers   'cache-control': 'max-age=300',
+402 verbose headers   'cf-ray': '4907e4f4ba8aa824-IST',
+402 verbose headers   etag: '"066879e224c11bec44f9702212365e28"',
+402 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+402 verbose headers   'last-modified': 'Sun, 25 Nov 2018 21:24:49 GMT',
+402 verbose headers   vary: 'accept-encoding, accept',
+402 verbose headers   'x-amz-meta-rev': '466-e86a2071ae28e1d03c45ad10b92a19a7',
+402 verbose headers   server: 'cloudflare' }
+403 silly get cb [ 304,
+403 silly get   { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+403 silly get     connection: 'keep-alive',
+403 silly get     'set-cookie':
+403 silly get      [ '__cfduid=d54726e5cdf528eeb751ffeb08d8baa9b1546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+403 silly get     'cf-cache-status': 'REVALIDATED',
+403 silly get     'cache-control': 'max-age=300',
+403 silly get     'cf-ray': '4907e4f4ba8aa824-IST',
+403 silly get     etag: '"066879e224c11bec44f9702212365e28"',
+403 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+403 silly get     'last-modified': 'Sun, 25 Nov 2018 21:24:49 GMT',
+403 silly get     vary: 'accept-encoding, accept',
+403 silly get     'x-amz-meta-rev': '466-e86a2071ae28e1d03c45ad10b92a19a7',
+403 silly get     server: 'cloudflare' } ]
+404 verbose etag https://registry.npmjs.org/xlsx from cache
+405 verbose get saving xlsx to /home/ilyas/.npm/registry.npmjs.org/xlsx/.cache.json
+406 silly mapToRegistry name xlsx
+407 silly mapToRegistry using default registry
+408 silly mapToRegistry registry https://registry.npmjs.org/
+409 silly mapToRegistry uri https://registry.npmjs.org/xlsx
+410 verbose addRemoteTarball https://registry.npmjs.org/xlsx/-/xlsx-0.14.0.tgz not in flight; adding
+411 verbose addRemoteTarball [ 'https://registry.npmjs.org/xlsx/-/xlsx-0.14.0.tgz',
+411 verbose addRemoteTarball   '4da79b08ad9e32106de66613f7a0d3ce559b1fad' ]
+412 silly mapToRegistry name socket.io
+413 silly mapToRegistry using default registry
+414 silly mapToRegistry registry https://registry.npmjs.org/
+415 silly mapToRegistry uri https://registry.npmjs.org/socket.io
+416 verbose addRemoteTarball https://registry.npmjs.org/socket.io/-/socket.io-2.1.1.tgz not in flight; adding
+417 verbose addRemoteTarball [ 'https://registry.npmjs.org/socket.io/-/socket.io-2.1.1.tgz',
+417 verbose addRemoteTarball   'a069c5feabee3e6b214a75b40ce0652e1cfb9980' ]
+418 info retry fetch attempt 1 at 2:44:22 AM
+419 info attempt registry request try #1 at 2:44:22 AM
+420 http fetch GET https://registry.npmjs.org/xlsx/-/xlsx-0.14.0.tgz
+421 info retry fetch attempt 1 at 2:44:22 AM
+422 info attempt registry request try #1 at 2:44:22 AM
+423 http fetch GET https://registry.npmjs.org/socket.io/-/socket.io-2.1.1.tgz
+424 http 200 https://registry.npmjs.org/express
+425 verbose headers { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+425 verbose headers   'content-type': 'application/json',
+425 verbose headers   'transfer-encoding': 'chunked',
+425 verbose headers   connection: 'keep-alive',
+425 verbose headers   'set-cookie':
+425 verbose headers    [ '__cfduid=d537bded93fb2876b9f999aabf29fd63e1546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+425 verbose headers   'cf-cache-status': 'REVALIDATED',
+425 verbose headers   'cache-control': 'max-age=300',
+425 verbose headers   'cf-ray': '4907e4f4bf7db04f-IST',
+425 verbose headers   etag: 'W/"6c2e51d5eba6113fe39b480ee2fe25ba"',
+425 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+425 verbose headers   'last-modified': 'Thu, 27 Dec 2018 20:16:15 GMT',
+425 verbose headers   vary: 'accept-encoding, accept',
+425 verbose headers   'x-amz-meta-rev': '3874-e962d19a12fa15efa2679e228d5af888',
+425 verbose headers   server: 'cloudflare',
+425 verbose headers   'content-encoding': 'gzip' }
+426 silly get cb [ 200,
+426 silly get   { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+426 silly get     'content-type': 'application/json',
+426 silly get     'transfer-encoding': 'chunked',
+426 silly get     connection: 'keep-alive',
+426 silly get     'set-cookie':
+426 silly get      [ '__cfduid=d537bded93fb2876b9f999aabf29fd63e1546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+426 silly get     'cf-cache-status': 'REVALIDATED',
+426 silly get     'cache-control': 'max-age=300',
+426 silly get     'cf-ray': '4907e4f4bf7db04f-IST',
+426 silly get     etag: 'W/"6c2e51d5eba6113fe39b480ee2fe25ba"',
+426 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+426 silly get     'last-modified': 'Thu, 27 Dec 2018 20:16:15 GMT',
+426 silly get     vary: 'accept-encoding, accept',
+426 silly get     'x-amz-meta-rev': '3874-e962d19a12fa15efa2679e228d5af888',
+426 silly get     server: 'cloudflare',
+426 silly get     'content-encoding': 'gzip' } ]
+427 verbose get saving express to /home/ilyas/.npm/registry.npmjs.org/express/.cache.json
+428 http fetch 200 https://registry.npmjs.org/socket.io/-/socket.io-2.1.1.tgz
+429 http fetch 200 https://registry.npmjs.org/xlsx/-/xlsx-0.14.0.tgz
+430 silly fetchAndShaCheck shasum a069c5feabee3e6b214a75b40ce0652e1cfb9980
+431 silly mapToRegistry name express
+432 silly mapToRegistry using default registry
+433 silly mapToRegistry registry https://registry.npmjs.org/
+434 silly mapToRegistry uri https://registry.npmjs.org/express
+435 verbose addRemoteTarball https://registry.npmjs.org/express/-/express-4.16.3.tgz not in flight; adding
+436 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-4.16.3.tgz',
+436 verbose addRemoteTarball   '6af8a502350db3246ecc4becf6b5a34d22f7ed53' ]
+437 verbose addTmpTarball /tmp/npm-22794-e6d1701f/registry.npmjs.org/socket.io/-/socket.io-2.1.1.tgz not in flight; adding
+438 verbose addTmpTarball already have metadata; skipping unpack for socket.io@2.1.1
+439 info retry fetch attempt 1 at 2:44:22 AM
+440 info attempt registry request try #1 at 2:44:22 AM
+441 http fetch GET https://registry.npmjs.org/express/-/express-4.16.3.tgz
+442 silly mapToRegistry name dtw
+443 silly mapToRegistry using default registry
+444 silly mapToRegistry registry https://registry.npmjs.org/
+445 silly mapToRegistry uri https://registry.npmjs.org/dtw
+446 verbose addRemoteTarball https://registry.npmjs.org/dtw/-/dtw-0.0.3.tgz not in flight; adding
+447 verbose addRemoteTarball [ 'https://registry.npmjs.org/dtw/-/dtw-0.0.3.tgz',
+447 verbose addRemoteTarball   'e73f3b86eec83ecb2a73f4d939732b01fcb5750a' ]
+448 info retry fetch attempt 1 at 2:44:22 AM
+449 info attempt registry request try #1 at 2:44:22 AM
+450 http fetch GET https://registry.npmjs.org/dtw/-/dtw-0.0.3.tgz
+451 verbose unbuild node_modules/.staging/socket.io-dd044a8d
+452 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d is being purged from base /home/ilyas/works/ap/jsproject
+453 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d
+454 verbose tar unpack /home/ilyas/.npm/socket.io/2.1.1/package.tgz
+455 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d
+456 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d is being purged
+457 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d
+458 silly gunzTarPerm modes [ '775', '664' ]
+459 silly gunzTarPerm extractEntry package.json
+460 silly gunzTarPerm extractEntry LICENSE
+461 silly gunzTarPerm extractEntry Readme.md
+462 silly gunzTarPerm extractEntry lib/client.js
+463 silly gunzTarPerm extractEntry lib/index.js
+464 silly gunzTarPerm extractEntry lib/namespace.js
+465 silly gunzTarPerm extractEntry lib/parent-namespace.js
+466 silly gunzTarPerm extractEntry lib/socket.js
+467 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d/node_modules is being purged
+468 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d/node_modules
+469 http fetch 200 https://registry.npmjs.org/express/-/express-4.16.3.tgz
+470 silly fetchAndShaCheck shasum 6af8a502350db3246ecc4becf6b5a34d22f7ed53
+471 verbose addTmpTarball /tmp/npm-22794-e6d1701f/registry.npmjs.org/express/-/express-4.16.3.tgz not in flight; adding
+472 verbose addTmpTarball already have metadata; skipping unpack for express@4.16.3
+473 verbose unbuild node_modules/.staging/express-57522a22
+474 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22 is being purged from base /home/ilyas/works/ap/jsproject
+475 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22
+476 verbose tar unpack /home/ilyas/.npm/express/4.16.3/package.tgz
+477 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22
+478 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22 is being purged
+479 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22
+480 silly gunzTarPerm modes [ '775', '664' ]
+481 silly gunzTarPerm extractEntry package.json
+482 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+483 silly gunzTarPerm extractEntry LICENSE
+484 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+485 silly gunzTarPerm extractEntry index.js
+486 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+487 silly gunzTarPerm extractEntry Readme.md
+488 silly gunzTarPerm modified mode [ 'Readme.md', 420, 436 ]
+489 silly gunzTarPerm extractEntry History.md
+490 silly gunzTarPerm modified mode [ 'History.md', 420, 436 ]
+491 silly gunzTarPerm extractEntry lib/application.js
+492 silly gunzTarPerm modified mode [ 'lib/application.js', 420, 436 ]
+493 http 200 https://registry.npmjs.org/nodemailer
+494 verbose headers { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+494 verbose headers   'content-type': 'application/json',
+494 verbose headers   'transfer-encoding': 'chunked',
+494 verbose headers   connection: 'keep-alive',
+494 verbose headers   'set-cookie':
+494 verbose headers    [ '__cfduid=d6fae7877f717e3ae6a8ca2737cc014a71546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+494 verbose headers   'cf-cache-status': 'REVALIDATED',
+494 verbose headers   'cache-control': 'max-age=300',
+494 verbose headers   'cf-ray': '4907e4f63d7ba7d0-IST',
+494 verbose headers   etag: 'W/"763453bc4f7a205490127444ac69f128"',
+494 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+494 verbose headers   'last-modified': 'Fri, 28 Dec 2018 10:45:47 GMT',
+494 verbose headers   vary: 'accept-encoding, accept',
+494 verbose headers   'x-amz-meta-rev': '929-060da184f7c41deefe5cb13bfcf60793',
+494 verbose headers   server: 'cloudflare',
+494 verbose headers   'content-encoding': 'gzip' }
+495 silly get cb [ 200,
+495 silly get   { date: 'Fri, 28 Dec 2018 23:44:22 GMT',
+495 silly get     'content-type': 'application/json',
+495 silly get     'transfer-encoding': 'chunked',
+495 silly get     connection: 'keep-alive',
+495 silly get     'set-cookie':
+495 silly get      [ '__cfduid=d6fae7877f717e3ae6a8ca2737cc014a71546040661; expires=Sat, 28-Dec-19 23:44:21 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+495 silly get     'cf-cache-status': 'REVALIDATED',
+495 silly get     'cache-control': 'max-age=300',
+495 silly get     'cf-ray': '4907e4f63d7ba7d0-IST',
+495 silly get     etag: 'W/"763453bc4f7a205490127444ac69f128"',
+495 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+495 silly get     'last-modified': 'Fri, 28 Dec 2018 10:45:47 GMT',
+495 silly get     vary: 'accept-encoding, accept',
+495 silly get     'x-amz-meta-rev': '929-060da184f7c41deefe5cb13bfcf60793',
+495 silly get     server: 'cloudflare',
+495 silly get     'content-encoding': 'gzip' } ]
+496 verbose get saving nodemailer to /home/ilyas/.npm/registry.npmjs.org/nodemailer/.cache.json
+497 silly gunzTarPerm extractEntry lib/express.js
+498 silly gunzTarPerm modified mode [ 'lib/express.js', 420, 436 ]
+499 silly gunzTarPerm extractEntry lib/request.js
+500 silly gunzTarPerm modified mode [ 'lib/request.js', 420, 436 ]
+501 silly gunzTarPerm extractEntry lib/response.js
+502 silly gunzTarPerm modified mode [ 'lib/response.js', 420, 436 ]
+503 silly gunzTarPerm extractEntry lib/utils.js
+504 silly gunzTarPerm modified mode [ 'lib/utils.js', 420, 436 ]
+505 silly gunzTarPerm extractEntry lib/view.js
+506 silly gunzTarPerm modified mode [ 'lib/view.js', 420, 436 ]
+507 silly gunzTarPerm extractEntry lib/middleware/init.js
+508 silly gunzTarPerm modified mode [ 'lib/middleware/init.js', 420, 436 ]
+509 silly gunzTarPerm extractEntry lib/middleware/query.js
+510 silly gunzTarPerm modified mode [ 'lib/middleware/query.js', 420, 436 ]
+511 silly gunzTarPerm extractEntry lib/router/index.js
+512 silly gunzTarPerm modified mode [ 'lib/router/index.js', 420, 436 ]
+513 silly gunzTarPerm extractEntry lib/router/layer.js
+514 silly gunzTarPerm modified mode [ 'lib/router/layer.js', 420, 436 ]
+515 silly gunzTarPerm extractEntry lib/router/route.js
+516 silly gunzTarPerm modified mode [ 'lib/router/route.js', 420, 436 ]
+517 silly mapToRegistry name nodemailer
+518 silly mapToRegistry using default registry
+519 silly mapToRegistry registry https://registry.npmjs.org/
+520 silly mapToRegistry uri https://registry.npmjs.org/nodemailer
+521 verbose addRemoteTarball https://registry.npmjs.org/nodemailer/-/nodemailer-4.6.8.tgz not in flight; adding
+522 verbose addRemoteTarball [ 'https://registry.npmjs.org/nodemailer/-/nodemailer-4.6.8.tgz',
+522 verbose addRemoteTarball   'f82fb407828bf2e76d92acc34b823d83e774f89c' ]
+523 info retry fetch attempt 1 at 2:44:22 AM
+524 info attempt registry request try #1 at 2:44:22 AM
+525 http fetch GET https://registry.npmjs.org/nodemailer/-/nodemailer-4.6.8.tgz
+526 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22/node_modules is being purged
+527 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22/node_modules
+528 http fetch 200 https://registry.npmjs.org/nodemailer/-/nodemailer-4.6.8.tgz
+529 silly fetchAndShaCheck shasum f82fb407828bf2e76d92acc34b823d83e774f89c
+530 verbose addTmpTarball /tmp/npm-22794-e6d1701f/registry.npmjs.org/nodemailer/-/nodemailer-4.6.8.tgz not in flight; adding
+531 verbose addTmpTarball already have metadata; skipping unpack for nodemailer@4.6.8
+532 verbose unbuild node_modules/.staging/nodemailer-8aefa68c
+533 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c is being purged from base /home/ilyas/works/ap/jsproject
+534 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c
+535 verbose tar unpack /home/ilyas/.npm/nodemailer/4.6.8/package.tgz
+536 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c
+537 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c is being purged
+538 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c
+539 silly gunzTarPerm modes [ '775', '664' ]
+540 silly gunzTarPerm extractEntry package.json
+541 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+542 silly gunzTarPerm extractEntry CHANGELOG.md
+543 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 436 ]
+544 silly gunzTarPerm extractEntry CONTRIBUTING.md
+545 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 420, 436 ]
+546 silly gunzTarPerm extractEntry LICENSE
+547 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+548 silly gunzTarPerm extractEntry README.md
+549 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+550 silly gunzTarPerm extractEntry lib/addressparser/index.js
+551 silly gunzTarPerm modified mode [ 'lib/addressparser/index.js', 420, 436 ]
+552 silly gunzTarPerm extractEntry lib/base64/index.js
+553 silly gunzTarPerm modified mode [ 'lib/base64/index.js', 420, 436 ]
+554 silly gunzTarPerm extractEntry lib/dkim/index.js
+555 silly gunzTarPerm modified mode [ 'lib/dkim/index.js', 420, 436 ]
+556 silly gunzTarPerm extractEntry lib/dkim/message-parser.js
+557 silly gunzTarPerm modified mode [ 'lib/dkim/message-parser.js', 420, 436 ]
+558 silly gunzTarPerm extractEntry lib/dkim/relaxed-body.js
+559 silly gunzTarPerm modified mode [ 'lib/dkim/relaxed-body.js', 420, 436 ]
+560 silly gunzTarPerm extractEntry lib/dkim/sign.js
+561 silly gunzTarPerm modified mode [ 'lib/dkim/sign.js', 420, 436 ]
+562 silly gunzTarPerm extractEntry lib/fetch/cookies.js
+563 silly gunzTarPerm modified mode [ 'lib/fetch/cookies.js', 420, 436 ]
+564 silly gunzTarPerm extractEntry lib/fetch/index.js
+565 silly gunzTarPerm modified mode [ 'lib/fetch/index.js', 420, 436 ]
+566 silly gunzTarPerm extractEntry lib/json-transport/index.js
+567 silly gunzTarPerm modified mode [ 'lib/json-transport/index.js', 420, 436 ]
+568 silly gunzTarPerm extractEntry lib/mail-composer/index.js
+569 silly gunzTarPerm modified mode [ 'lib/mail-composer/index.js', 420, 436 ]
+570 silly gunzTarPerm extractEntry lib/mailer/index.js
+571 silly gunzTarPerm modified mode [ 'lib/mailer/index.js', 420, 436 ]
+572 silly gunzTarPerm extractEntry lib/mailer/mail-message.js
+573 silly gunzTarPerm modified mode [ 'lib/mailer/mail-message.js', 420, 436 ]
+574 silly gunzTarPerm extractEntry lib/mime-funcs/index.js
+575 silly gunzTarPerm modified mode [ 'lib/mime-funcs/index.js', 420, 436 ]
+576 silly gunzTarPerm extractEntry lib/mime-funcs/mime-types.js
+577 silly gunzTarPerm modified mode [ 'lib/mime-funcs/mime-types.js', 420, 436 ]
+578 silly gunzTarPerm extractEntry lib/mime-node/index.js
+579 silly gunzTarPerm modified mode [ 'lib/mime-node/index.js', 420, 436 ]
+580 silly gunzTarPerm extractEntry lib/mime-node/last-newline.js
+581 silly gunzTarPerm modified mode [ 'lib/mime-node/last-newline.js', 420, 436 ]
+582 silly gunzTarPerm extractEntry lib/nodemailer.js
+583 silly gunzTarPerm modified mode [ 'lib/nodemailer.js', 420, 436 ]
+584 silly gunzTarPerm extractEntry lib/qp/index.js
+585 silly gunzTarPerm modified mode [ 'lib/qp/index.js', 420, 436 ]
+586 silly gunzTarPerm extractEntry lib/sendmail-transport/index.js
+587 silly gunzTarPerm modified mode [ 'lib/sendmail-transport/index.js', 420, 436 ]
+588 silly gunzTarPerm extractEntry lib/sendmail-transport/le-unix.js
+589 silly gunzTarPerm modified mode [ 'lib/sendmail-transport/le-unix.js', 420, 436 ]
+590 silly gunzTarPerm extractEntry lib/sendmail-transport/le-windows.js
+591 silly gunzTarPerm modified mode [ 'lib/sendmail-transport/le-windows.js', 420, 436 ]
+592 silly gunzTarPerm extractEntry lib/ses-transport/index.js
+593 silly gunzTarPerm modified mode [ 'lib/ses-transport/index.js', 420, 436 ]
+594 silly gunzTarPerm extractEntry lib/shared/index.js
+595 silly gunzTarPerm modified mode [ 'lib/shared/index.js', 420, 436 ]
+596 silly gunzTarPerm extractEntry lib/smtp-connection/data-stream.js
+597 silly gunzTarPerm modified mode [ 'lib/smtp-connection/data-stream.js', 420, 436 ]
+598 silly gunzTarPerm extractEntry lib/smtp-connection/http-proxy-client.js
+599 silly gunzTarPerm modified mode [ 'lib/smtp-connection/http-proxy-client.js', 420, 436 ]
+600 silly gunzTarPerm extractEntry lib/smtp-connection/index.js
+601 silly gunzTarPerm modified mode [ 'lib/smtp-connection/index.js', 420, 436 ]
+602 silly gunzTarPerm extractEntry lib/smtp-pool/index.js
+603 silly gunzTarPerm modified mode [ 'lib/smtp-pool/index.js', 420, 436 ]
+604 silly gunzTarPerm extractEntry lib/smtp-pool/pool-resource.js
+605 silly gunzTarPerm modified mode [ 'lib/smtp-pool/pool-resource.js', 420, 436 ]
+606 silly gunzTarPerm extractEntry lib/smtp-transport/index.js
+607 silly gunzTarPerm modified mode [ 'lib/smtp-transport/index.js', 420, 436 ]
+608 silly gunzTarPerm extractEntry lib/stream-transport/index.js
+609 silly gunzTarPerm modified mode [ 'lib/stream-transport/index.js', 420, 436 ]
+610 silly gunzTarPerm extractEntry lib/well-known/index.js
+611 silly gunzTarPerm modified mode [ 'lib/well-known/index.js', 420, 436 ]
+612 silly gunzTarPerm extractEntry lib/well-known/services.json
+613 silly gunzTarPerm modified mode [ 'lib/well-known/services.json', 420, 436 ]
+614 silly gunzTarPerm extractEntry lib/xoauth2/index.js
+615 silly gunzTarPerm modified mode [ 'lib/xoauth2/index.js', 420, 436 ]
+616 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c/node_modules is being purged
+617 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c/node_modules
+618 http fetch 200 https://registry.npmjs.org/dtw/-/dtw-0.0.3.tgz
+619 silly fetchAndShaCheck shasum e73f3b86eec83ecb2a73f4d939732b01fcb5750a
+620 verbose addTmpTarball /tmp/npm-22794-e6d1701f/registry.npmjs.org/dtw/-/dtw-0.0.3.tgz not in flight; adding
+621 verbose addTmpTarball already have metadata; skipping unpack for dtw@0.0.3
+622 verbose unbuild node_modules/.staging/dtw-2640add2
+623 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2 is being purged from base /home/ilyas/works/ap/jsproject
+624 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2
+625 verbose tar unpack /home/ilyas/.npm/dtw/0.0.3/package.tgz
+626 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2
+627 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2 is being purged
+628 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2
+629 silly gunzTarPerm modes [ '775', '664' ]
+630 silly gunzTarPerm extractEntry package.json
+631 silly gunzTarPerm modified mode [ 'package.json', 438, 436 ]
+632 silly gunzTarPerm extractEntry .npmignore
+633 silly gunzTarPerm modified mode [ '.npmignore', 438, 436 ]
+634 silly gunzTarPerm extractEntry README.md
+635 silly gunzTarPerm modified mode [ 'README.md', 438, 436 ]
+636 silly gunzTarPerm extractEntry LICENSE
+637 silly gunzTarPerm modified mode [ 'LICENSE', 438, 436 ]
+638 silly gunzTarPerm extractEntry index.js
+639 silly gunzTarPerm modified mode [ 'index.js', 438, 436 ]
+640 silly gunzTarPerm extractEntry doc/api/dtw.md
+641 silly gunzTarPerm modified mode [ 'doc/api/dtw.md', 438, 436 ]
+642 silly gunzTarPerm extractEntry lib/comparison.js
+643 silly gunzTarPerm modified mode [ 'lib/comparison.js', 438, 436 ]
+644 silly gunzTarPerm extractEntry lib/dtw.js
+645 silly gunzTarPerm modified mode [ 'lib/dtw.js', 438, 436 ]
+646 silly gunzTarPerm extractEntry lib/matrix.js
+647 silly gunzTarPerm modified mode [ 'lib/matrix.js', 438, 436 ]
+648 silly gunzTarPerm extractEntry lib/validate.js
+649 silly gunzTarPerm modified mode [ 'lib/validate.js', 438, 436 ]
+650 silly gunzTarPerm extractEntry lib/distanceFunctions/euclidean.js
+651 silly gunzTarPerm modified mode [ 'lib/distanceFunctions/euclidean.js', 438, 436 ]
+652 silly gunzTarPerm extractEntry lib/distanceFunctions/manhattan.js
+653 silly gunzTarPerm modified mode [ 'lib/distanceFunctions/manhattan.js', 438, 436 ]
+654 silly gunzTarPerm extractEntry lib/distanceFunctions/squaredEuclidean.js
+655 silly gunzTarPerm modified mode [ 'lib/distanceFunctions/squaredEuclidean.js', 438, 436 ]
+656 silly gunzTarPerm extractEntry tests/dtw.js
+657 silly gunzTarPerm modified mode [ 'tests/dtw.js', 438, 436 ]
+658 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2/node_modules is being purged
+659 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2/node_modules
+660 silly fetchAndShaCheck shasum 4da79b08ad9e32106de66613f7a0d3ce559b1fad
+661 verbose addTmpTarball /tmp/npm-22794-e6d1701f/registry.npmjs.org/xlsx/-/xlsx-0.14.0.tgz not in flight; adding
+662 verbose addTmpTarball already have metadata; skipping unpack for xlsx@0.14.0
+663 verbose unbuild node_modules/.staging/xlsx-73bfb752
+664 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752 is being purged from base /home/ilyas/works/ap/jsproject
+665 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752
+666 verbose tar unpack /home/ilyas/.npm/xlsx/0.14.0/package.tgz
+667 verbose tar unpacking to /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752
+668 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752 is being purged
+669 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752
+670 silly gunzTarPerm modes [ '775', '664' ]
+671 silly gunzTarPerm extractEntry package.json
+672 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+673 silly gunzTarPerm extractEntry bower.json
+674 silly gunzTarPerm modified mode [ 'bower.json', 420, 436 ]
+675 silly gunzTarPerm extractEntry CHANGELOG.md
+676 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 436 ]
+677 silly gunzTarPerm extractEntry formats.dot
+678 silly gunzTarPerm modified mode [ 'formats.dot', 420, 436 ]
+679 silly gunzTarPerm extractEntry formats.png
+680 silly gunzTarPerm modified mode [ 'formats.png', 420, 436 ]
+681 silly gunzTarPerm extractEntry jszip.js
+682 silly gunzTarPerm modified mode [ 'jszip.js', 420, 436 ]
+683 silly gunzTarPerm extractEntry legend.png
+684 silly gunzTarPerm modified mode [ 'legend.png', 420, 436 ]
+685 silly gunzTarPerm extractEntry LICENSE
+686 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+687 silly gunzTarPerm extractEntry README.md
+688 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+689 silly gunzTarPerm extractEntry xlsx.js
+690 silly gunzTarPerm modified mode [ 'xlsx.js', 420, 436 ]
+691 silly gunzTarPerm extractEntry xlsxworker.js
+692 silly gunzTarPerm modified mode [ 'xlsxworker.js', 420, 436 ]
+693 silly gunzTarPerm extractEntry bin/xlsx.njs
+694 silly gunzTarPerm modified mode [ 'bin/xlsx.njs', 493, 509 ]
+695 silly gunzTarPerm extractEntry dist/cpexcel.js
+696 silly gunzTarPerm modified mode [ 'dist/cpexcel.js', 420, 436 ]
+697 silly gunzTarPerm extractEntry dist/jszip.js
+698 silly gunzTarPerm modified mode [ 'dist/jszip.js', 420, 436 ]
+699 silly gunzTarPerm extractEntry dist/LICENSE
+700 silly gunzTarPerm modified mode [ 'dist/LICENSE', 420, 436 ]
+701 silly gunzTarPerm extractEntry dist/shim.min.js
+702 silly gunzTarPerm modified mode [ 'dist/shim.min.js', 420, 436 ]
+703 silly gunzTarPerm extractEntry dist/xlsx.core.min.js
+704 silly gunzTarPerm modified mode [ 'dist/xlsx.core.min.js', 420, 436 ]
+705 silly gunzTarPerm extractEntry dist/xlsx.core.min.map
+706 silly gunzTarPerm modified mode [ 'dist/xlsx.core.min.map', 420, 436 ]
+707 silly gunzTarPerm extractEntry dist/xlsx.extendscript.js
+708 silly gunzTarPerm modified mode [ 'dist/xlsx.extendscript.js', 420, 436 ]
+709 silly gunzTarPerm extractEntry dist/xlsx.full.min.js
+710 silly gunzTarPerm modified mode [ 'dist/xlsx.full.min.js', 420, 436 ]
+711 silly gunzTarPerm extractEntry dist/xlsx.full.min.map
+712 silly gunzTarPerm modified mode [ 'dist/xlsx.full.min.map', 420, 436 ]
+713 silly gunzTarPerm extractEntry dist/xlsx.js
+714 silly gunzTarPerm modified mode [ 'dist/xlsx.js', 420, 436 ]
+715 silly gunzTarPerm extractEntry dist/xlsx.min.js
+716 silly gunzTarPerm modified mode [ 'dist/xlsx.min.js', 420, 436 ]
+717 silly gunzTarPerm extractEntry dist/xlsx.min.map
+718 silly gunzTarPerm modified mode [ 'dist/xlsx.min.map', 420, 436 ]
+719 silly gunzTarPerm extractEntry types/index.d.ts
+720 silly gunzTarPerm modified mode [ 'types/index.d.ts', 420, 436 ]
+721 silly gunzTarPerm extractEntry types/tsconfig.json
+722 silly gunzTarPerm modified mode [ 'types/tsconfig.json', 420, 436 ]
+723 silly gentlyRm /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752/node_modules is being purged
+724 verbose gentlyRm don't care about contents; nuking /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752/node_modules
+725 silly doParallel preinstall 7
+726 silly preinstall dtw@0.0.3 /home/ilyas/works/ap/jsproject/node_modules/.staging/dtw-2640add2
+727 info lifecycle dtw@0.0.3~preinstall: dtw@0.0.3
+728 silly preinstall express@4.16.3 /home/ilyas/works/ap/jsproject/node_modules/.staging/express-57522a22
+729 info lifecycle express@4.16.3~preinstall: express@4.16.3
+730 silly preinstall mysql@2.16.0 /home/ilyas/works/ap/jsproject/node_modules/.staging/mysql-75a94cfa
+731 info lifecycle mysql@2.16.0~preinstall: mysql@2.16.0
+732 silly preinstall nodemailer@4.6.8 /home/ilyas/works/ap/jsproject/node_modules/.staging/nodemailer-8aefa68c
+733 info lifecycle nodemailer@4.6.8~preinstall: nodemailer@4.6.8
+734 silly preinstall pandas-js@0.2.4 /home/ilyas/works/ap/jsproject/node_modules/.staging/pandas-js-0b99fc92
+735 info lifecycle pandas-js@0.2.4~preinstall: pandas-js@0.2.4
+736 silly preinstall socket.io@2.1.1 /home/ilyas/works/ap/jsproject/node_modules/.staging/socket.io-dd044a8d
+737 info lifecycle socket.io@2.1.1~preinstall: socket.io@2.1.1
+738 silly preinstall xlsx@0.14.0 /home/ilyas/works/ap/jsproject/node_modules/.staging/xlsx-73bfb752
+739 info lifecycle xlsx@0.14.0~preinstall: xlsx@0.14.0
+740 silly lifecycle dtw@0.0.3~preinstall: no script for preinstall, continuing
+741 silly lifecycle express@4.16.3~preinstall: no script for preinstall, continuing
+742 silly lifecycle mysql@2.16.0~preinstall: no script for preinstall, continuing
+743 silly lifecycle nodemailer@4.6.8~preinstall: no script for preinstall, continuing
+744 silly lifecycle pandas-js@0.2.4~preinstall: no script for preinstall, continuing
+745 silly lifecycle socket.io@2.1.1~preinstall: no script for preinstall, continuing
+746 silly lifecycle xlsx@0.14.0~preinstall: no script for preinstall, continuing
+747 silly doReverseSerial remove 0
+748 silly doSerial move 0
+749 silly doSerial finalize 7
+750 silly finalize /home/ilyas/works/ap/jsproject/node_modules/dtw
+751 silly finalize /home/ilyas/works/ap/jsproject/node_modules/express
+752 silly finalize /home/ilyas/works/ap/jsproject/node_modules/mysql
+753 verbose unlock done using /home/ilyas/.npm/_locks/staging-822ea5919ac265d7.lock for /home/ilyas/works/ap/jsproject/node_modules/.staging
+754 silly rollbackFailedOptional Starting
+755 silly rollbackFailedOptional Finishing
+756 silly runTopLevelLifecycles Starting
+757 silly runTopLevelLifecycles Finishing
+758 silly install printInstalled
+759 warn project@1.0.0 No repository field.
+760 verbose stack Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer'
+760 verbose stack     at /usr/share/npm/lib/install/action/finalize.js:64:7
+760 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+760 verbose stack     at Array.forEach (<anonymous>)
+760 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+760 verbose stack     at Array.forEach (<anonymous>)
+760 verbose stack     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+760 verbose stack     at moveModules (/usr/share/npm/lib/install/action/finalize.js:61:5)
+760 verbose stack     at /usr/share/npm/lib/install/action/finalize.js:56:70
+760 verbose stack     at /usr/share/npm/node_modules/mkdirp/index.js:30:20
+760 verbose stack     at FSReqWrap.oncomplete (fs.js:135:15)
+760 verbose stack
+760 verbose stack Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer'
+761 verbose cwd /home/ilyas/works/ap/jsproject
+762 error Linux 4.15.0-43-generic
+763 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+764 error node v8.10.0
+765 error npm  v3.5.2
+766 error path /home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer
+767 error code EACCES
+768 error errno -13
+769 error syscall rename
+770 error Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer'
+770 error     at /usr/share/npm/lib/install/action/finalize.js:64:7
+770 error     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+770 error     at Array.forEach (<anonymous>)
+770 error     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+770 error     at Array.forEach (<anonymous>)
+770 error     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+770 error     at moveModules (/usr/share/npm/lib/install/action/finalize.js:61:5)
+770 error     at /usr/share/npm/lib/install/action/finalize.js:56:70
+770 error     at /usr/share/npm/node_modules/mkdirp/index.js:30:20
+770 error     at FSReqWrap.oncomplete (fs.js:135:15)
+770 error
+770 error Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer'
+770 error  { Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer'
+770 error     at /usr/share/npm/lib/install/action/finalize.js:64:7
+770 error     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+770 error     at Array.forEach (<anonymous>)
+770 error     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+770 error     at Array.forEach (<anonymous>)
+770 error     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+770 error     at moveModules (/usr/share/npm/lib/install/action/finalize.js:61:5)
+770 error     at /usr/share/npm/lib/install/action/finalize.js:56:70
+770 error     at /usr/share/npm/node_modules/mkdirp/index.js:30:20
+770 error     at FSReqWrap.oncomplete (fs.js:135:15)
+770 error
+770 error Error: EACCES: permission denied, rename '/home/ilyas/works/ap/jsproject/node_modules/.mysql.DELETE/node_modules/safe-buffer' -> '/home/ilyas/works/ap/jsproject/node_modules/mysql/node_modules/safe-buffer' parent: 'project' }
+771 error Please try running this command again as root/Administrator.
+772 verbose exit [ -13, true ]

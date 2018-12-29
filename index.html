@@ -35,29 +35,19 @@
             <div class="row"><input class="menu-item" type="file" id="data-input" multiple></div>
             <div class="row"><select class="menu-item select-files" id="select-files" multiple></select></div>
             <div class="row"><input class="menu-item" id="choose-color" type="color"></div>
-
-
+            
             <div class="w3-container row">
                 <div class="w3-dropdown-hover">
                     <button class="w3-button w3-black">İşlem Seç</button>
                     <div class="w3-dropdown-content w3-bar-block w3-border">
-                        <a id="set-map" class="w3-bar-item w3-button">Set Map</a>
+                        <a id="set-map-line" class="w3-bar-item w3-button">Set Map Line</a>
                         <a id="reset-map" class="w3-bar-item w3-button">Reset Map</a>
-                        <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#reduction-modal">Reduction</a>
-                        <a id="dtw" class="w3-bar-item w3-button">DTW</a>
-                        <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#lcss-modal">LCSS</a>
-                        <a id="delete-path" class="w3-bar-item w3-button">Delete</a>
+                        <a id="set-map-point" class="w3-bar-item w3-button">Set Map Point</a>
+                        <a id="delete-path" class="w3-bar-item w3-button">Delete Partition</a>
                         <a id="new-path" class="w3-bar-item w3-button">Save New Path</a>
-                        <a id="car-count" class="w3-bar-item w3-button">Car Count</a>
                     </div>
                 </div>
             </div>
-      
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <div class="row">
                 <div class="w3-container w3-green w3-round-xxlarge">
@@ -65,133 +55,182 @@
                 </div>
             </div>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
 
-        
-            <div class="row input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Latiude</span>
-              </div>
-              <input id="latitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <div class="accordion" id="accordionExample">
+                <div class="card"><!--Home-->
+                    <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Home
+                        </button>
+                    </h5>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        buraya some content gelecek
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--Show Coordinats-->
+                    <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapscollapseSeveneTwo">
+                        Show Coordinats
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul style="list-style: none;">
+                            <li>
+                                <div class="row input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Latiude</span>
+                                    </div>
+                                    <input id="latitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Longitude</span>
+                                    </div>
+                                    <input id="longitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </li>
+                            <li><div class="row"><button id="show-coordinat" class="btn btn-primary menu-item">Show Coordinat</button></div></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--Reduction-->
+                    <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Reduction
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Tolerance</span>
+                                </div>
+                                <input id="tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="reduction" class="form-control btn btn-primary" data-dismiss="modal">Reduce</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--ED-->
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ED
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <button type="button" id="ed-for-count" class="btn btn-primary">ED For Count</button>
+                        <button type="button" id="ed-for-length" class="btn btn-primary">ED For Length</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--DTW-->
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        DTW
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <button type="button" id="dtw" class="btn btn-primary">DTW</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--LCSS-->
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        LCSS
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Sigma</span>
+                                </div>
+                                <input id="sigma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Gamma</span>
+                                </div>
+                                <input id="gamma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="lcss" class="btn btn-primary" data-dismiss="modal">Compute</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                <div class="card"><!--Voyage Count-->
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapsecollapseSixThree">
+                        Voyage Count
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Begin Time</span>
+                                </div>
+                                <input id="begin-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">End Time</span>
+                                </div>
+                                <input id="end-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Max Time</span>
+                                </div>
+                                <input id="max-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Dist Tol</span>
+                                </div>
+                                <input id="distance-tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="car-count-submit" class="form-control btn btn-primary" data-dismiss="modal">Find Voyage Count</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
             </div>
-            <div class="row input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Longitude</span>
-              </div>
-              <input id="longitude" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-            <div class="row"><button id="show-coordinat" class="btn btn-primary menu-item">Show Coordinat</button></div>
             
-        </div>
-    </div>
-
-
-    <!-- Reduction Modal -->
-    <div class="modal fade" id="reduction-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title">Reduction</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Tolerance</span>
-                        </div>
-                        <input id="tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="reduction" class="btn btn-primary" data-dismiss="modal">Reduce</button>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <!-- LCSS Modal -->
-    <div class="modal fade" id="lcss-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title">LCSS</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Sigma</span>
-                        </div>
-                        <input id="sigma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <div class="row input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Gamma</span>
-                        </div>
-                        <input id="gamma" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="lcss" class="btn btn-primary" data-dismiss="modal">Compute</button>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <!-- Car Count Modal -->
-    <div class="modal fade" id="car-count-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Car Count</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Begin Time</span>
-                            </div>
-                            <input id="begin-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="row input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">End Time</span>
-                            </div>
-                            <input id="end-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="row input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Max Time</span>
-                            </div>
-                            <input id="max-time" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="row input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Distance Tolerance</span>
-                            </div>
-                            <input id="distance-tolerance" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="car-count-submit" class="btn btn-primary" data-dismiss="modal">Find Car Count</button>
-                </div>
-            </div>
         </div>
     </div>
 
