@@ -6,7 +6,9 @@ const fs = require('fs');
 
 app.use(express.static(__dirname + '/view'))
 
-server.listen(60000)
+var port = 2000
+console.log("localhost:" + port)
+server.listen(port)
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html')
@@ -31,7 +33,6 @@ io.on('connection', function (socket) {
 					latlong.push([parseFloat(dizi[0]), parseFloat(dizi[1]), dizi[5], dizi[6]]);
 				}
       }
-      console.log(latlong[1])
       socket.emit('data-is-ready', latlong)
 
 		});

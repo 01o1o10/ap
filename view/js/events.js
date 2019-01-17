@@ -5,7 +5,7 @@ var point1, point2, square = {}
 var newPath = []
 $(document).ready(function(){
     //// IMPORTS
-    const socket = io.connect('http://localhost:60000')
+    const socket = io.connect('http://localhost:2000')
     
     //// VARIABLES
 
@@ -54,12 +54,14 @@ $(document).ready(function(){
         var fi = $('.select-files').val()
 
         if(fi.length == 2){
-            var distanceMatrix = dtw.euclideanDistanceMatrix(latlong[fi[0]], latlong[fi[1]])
-            var dtwResult = dtw.dtw(distanceMatrix)
-            mapFunctions.drawLines(latlong[fi[0]], latlong[fi[1]], dtwResult.pathIndexs)
+            var M = dtw.M(latlong[fi[0]], latlong[fi[1]])
+            var C = dtw.C(M)
+            var DTW = {cost: C[C.length][C[0].length]}
+            DTW.path = dtw.dtw(C) // DTW path and min path cost
+            mapFunctions.drawLines(latlong[fi[0]], latlong[fi[1]], DTW.path)
             var path1Length = tools.pathLength(latlong[fi[0]])
             var path2Length = tools.pathLength(latlong[fi[1]])
-            document.getElementById('sonuc').innerText = Math.round(100 * (1 - (dtwResult.minDist/(path1Length + path2Length))))
+            document.getElementById('sonuc').innerText = Math.round(100 * (1 - (DTW.cost/(path1Length + path2Length))))
         }
         else{
             alert("For this algorithm just you must select two trajectory!")
@@ -70,15 +72,14 @@ $(document).ready(function(){
         var fi = $('.select-files').val()
 
         if(fi.length == 2){
-            var sigma = 0.01 * document.getElementById('sigma').value
-            //var gamma = 0.01 * document.getElementById('gamma').value
-            var simPnt = lcss.lcssdm(latlong[fi[0]], latlong[fi[1]], sigma)
-            var L = lcss.lcss(simPnt)
+            var delta = 0.01 * document.getElementById('delta').value
+            var L = lcss(latlong[fi[0]], latlong[fi[1]], delta)
+            console.log(L)
             mapFunctions.drawLines(latlong[fi[0]], latlong[fi[1]], L)
             var path1Length = tools.pathLength(latlong[fi[0]])
             var path2Length = tools.pathLength(latlong[fi[1]])
             var subSimPathLength = tools.subPathLangth(latlong[fi[0]], latlong[fi[1]], L)
-            var similarty = (subSimPathLength/Math.min(path1Length, path2Length)) * 100
+            var similarty = subSimPathLength * 100 / Math.min(path1Length, path2Length)
             document.getElementById('sonuc').innerText = 'Similarity: %' + Math.round(similarty)
         }
         else{
@@ -263,16 +264,13 @@ $(document).ready(function(){
     
         printPointPath: function(path){
             for(i in path){
-                addMark(path[i], i)
+                mapFunctions.addMark(path[i], i)
             }
         },
 
         drawLines: function(path1, path2, path){
             for(i = 0; i < path.length; i++){
-                //console.log([path1[path[i][0]], path2[path[i][1]]], path[i][0], path[i][1])
-                if(path1[path[i][0]] != undefined && path2[path[i][1]] != undefined){
-                    mapFunctions.addPolyline([path1[path[i][0]], path2[path[i][1]]], '#ff0000')
-                }
+                mapFunctions.addPolyline([path1[path[i][0]], path2[path[i][1]]], '#ff0000')
             }
         }
     }
@@ -329,66 +327,45 @@ $(document).ready(function(){
     }
 
     dtw = {
-        euclideanDistanceMatrix: function(path1, path2){
-            var distanceMatrix = []
-            var row = []
+        M: function(path1, path2){
+            var M = tools.array(path1.length, path2.length, 0) // distance matrix
+
             for(i = 0; i < path1.length; i++){
-                row = []
                 for(j = 0; j < path2.length; j++){
-                    row.push(tools.distance(path1[i], path2[j]))
+                    M[i][j] = tools.distance(path1[i], path2[j])
                 }
-                distanceMatrix.push(row)
             }
-            return distanceMatrix
+
+            return M
         },
 
-        dtw: function(dm){
+        C: function(M){
+            var C = tools.array(M.length, M[0].length, 0) // cost matrix
+            C = M[0][0]
 
-            //console.log('dm', dm);
-            
-            //getting row and column count
-            var n = dm.length
-            var m = dm[0].length
-    
-            //console.log("m: " + m, "n: "+ n);
-            
-    
-            //create zeros matrix
-            var ac = []
-            for(i = 0; i < n; i++){
-                ac.push([])
-                for(j = 0; j < m; j++){
-                    ac[i].push(0)
+            for(j = 1; j < M[0].length; j++){ // setting first row
+                C[0][j] = M[0][j] + M[0][j-1]
+            }
+
+            for(i = 1; i < M.length; i++){ // setting first column
+                C[i][0] = M[i][0] + M[i-1][0]
+            }
+
+            for(i = 1; i < path1.length; i++){ // setting others
+                for(j = 1; j < path2.length; j++){
+                    C[i][j] = M[i][j] + Math.min(M[i-1][j-1], M[i-1][j], M[i][j-1])
                 }
             }
-            //console.log('zeros matrix', ac)
-            
-    
-            //getting first node of path
-            ac[0][0] = (0 + dm[0][0])
-            //console.log('first node', ac)
-             
-            for(j = 1; j < m; j++){
-                ac[0][j] = ac[0][j-1] + dm[0][j]
-            }
-            //console.log('first row', ac)
-    
-            for(i = 1; i < n; i++){
-                ac[i][0] = ac[i-1][0] + dm[i][0]
-            }
-            //console.log('first column', ac)
-    
-            for(i = 1; i < n; i++){
-                for(j = 1; j < m; j++){
-                    ac[i][j] = Math.min(dm[i-1][j-1], dm[i-1][j], dm[i][j-1]) + dm[i][j]
-                }
-            }
-            //console.log('ac cost', ac)
-    
-            var totalDistance = 0
-            var path = [[n-1, m-1]]
-            var i = n - 1
-            var j = m - 1
+
+            return C
+        },
+
+        dtw: function(C){
+            var m = C.length
+            var n = C[0].length
+            var path = [[m-1, n-1]]
+            var i = m - 1
+            var j = n - 1
     
             while(i > 0 && j > 0){
                 if(i == 0){
@@ -398,28 +375,38 @@ $(document).ready(function(){
                     i = i - 1
                 }
                 else {
-                    if(ac[i-1][j] == Math.min(ac[i-1][j-1], ac[i-1][j], ac[i][j-1])){
+                    if(C[i-1][j-1] == Math.min(C[i-1][j-1], C[i-1][j], C[i][j-1])){
                         i = i - 1
+                        j = j - 1
                     }
-                    else if(ac[i][j-1] == Math.min(ac[i-1][j-1], ac[i-1][j], ac[i][j-1])){
+                    else if(C[i-1][j] == Math.min(C[i-1][j-1], C[i-1][j], C[i][j-1])){
                         j = j -1
                     }
                     else {
                         i = i - 1
-                        j = j - 1
                     }
                 }
-                totalDistance += dm[i][j]
                 path.push([i, j])
             }
             path.push([0, 0])
-            //console.log('path: ', path)
     
-            return {pathIndexs: path, minDist: totalDistance}
+            return path
         }
     }
 
     tools = {
+        normalize: function(val, min, max){
+            return ((val - min) * 255) / (max - min)
+        },
+
+        array: function(m, n, value){
+            var M = []
+            for(i = 0; i < m; i++){
+                M.push(new Array(n).fill(value))
+            }
+            return M
+        },
+
         deletePathPart: function(path, square){
             for(i = 0; i < path.length; i++){
                 if(path[i][0] < square.right && path[i][0] > square.left && path[i][1] < square.top && path[i][1] > square.bottom){
@@ -444,152 +431,95 @@ $(document).ready(function(){
 
         subPathLangth: function(path1, path2, path){
             var subPath = 0
-            for(i = 0; i < path.length-1; ){
-                if(path[i][0] + 1 == path[i+1][0]){
-                    for(j = i; j < path.length-1 && path[j][0] + 1 == path[j+1][0]; j++){}
-                    if(path[i] && path[j]){
-                        console.log(path1.slice(path[i][0], path[j][0] + 1), path2.slice(path[i][1], path[j][1] + 1), i, j)
-                        var path1SubSeqLen = tools.pathLength(path1.slice(path[i][0], path[j][0] + 1))
-                        var path2SubSeqLen = tools.pathLength(path2.slice(path[i][1], path[j][1] + 1))
-                        //addPolyline(path1.slice(path[i][0], path[j][0] + 1), '#00ff00')
-                        //addPolyline(path2.slice(path[i][1], path[j][1] + 1), '#00ff00')
-                        subPath += Math.min(path1SubSeqLen, path2SubSeqLen)
-                    }
-                    console.log(i, j)
+            for(i = 0; i < path.length-1; i++){
+                    for(j = i; j < path.length-1 && (path[j][0] + 1 == path[j+1][0] || path[j][0] == path[j+1][0]) && (path[j][1] + 1 == path[j+1][1] || path[j][1] == path[j+1][1]); j++){}
+                    //console.log("path", path.slice(i, j+1))
+                    mapFunctions.addPolyline(path1.slice(path[i][0], path[j][0]+1), '#00ff00')
+                    mapFunctions.addPolyline(path2.slice(path[i][1], path[j][1]+1), '#00ff00')
+                    var path1SubSeqLen = tools.pathLength(path1.slice(path[i][0], path[j][0]+1))
+                    var path2SubSeqLen = tools.pathLength(path2.slice(path[i][1], path[j][1]+1))
+                    console.log(path1SubSeqLen, path2SubSeqLen)
+                    subPath += Math.min(path1SubSeqLen, path2SubSeqLen)
                     i = j
-                }
-                else {
-                    i++
-                }
             }
             return subPath
         }
     }
 
-    lcss = {
-        lcssdm: function(path1, path2, sigma){
-            var simPnt = []
-            var row = []
-            var dr
-            for(i = 0; i < path1.length; i++){
-                row = []
-                for(j = 0; j < path2.length; j++){
-                    dr = tools.distance(path1[i], path2[j])
-                    if(i == 0 || j == 0){
-                        row.push(0)
-                    }
-                    else {
-                        if(dr < sigma){
-                            row.push(1 - (dr/sigma))
-                        }
-                        else{
-                            row.push(0)
-                        }
-                    }
-                }
-                simPnt.push(row)
+    function lcss(path1, path2, delta){
+
+        var n = path1.length + 1
+        var m = path2.length + 1
+        console.log("n: " + n, "m: "+ m)
+
+        var M = []
+        for(i = 0; i < n; i++){
+            M.push([])
+            for(j = 0; j < m; j++){
+                M[i].push({sim: 0})
             }
-            return simPnt
-        },
-    
-        lcss: function(simPnt){
-            console.log('simPnt', simPnt)
-    
-            //getting row and column count
-            var n = simPnt.length
-            var m = simPnt[0].length
-    
-            console.log("m: " + m, "n: "+ n);
-            
-    
-            //create zeros matrix
-            var scoreLCS = []
-            for(i = 0; i < n; i++){
-                scoreLCS.push([])
-                for(j = 0; j < m; j++){
-                    scoreLCS[i].push({value: 0})
-                }
-            }
-            console.log('zeros matrix', scoreLCS)
-    
-            for(i = 1; i < n; i++){
-                for(j = 1; j < m; j++){
-                    if(i == 0){
-                        scoreLCS[i][j].value = 0
-                        scoreLCS[i][j].dir = 'top'
-                    }
-                    else if(j == 0){
-                        scoreLCS[i][j].value = 0
-                        scoreLCS[i][j].dir = 'left'
-                    }
-                    else {
-                        if(simPnt[i][j] != 0){
-                            scoreLCS[i][j].value = simPnt[i][j]
-    
-                            max = Math.max(scoreLCS[i-1][j].value, scoreLCS[i][j-1].value)
-                            if(max < simPnt[i][j]){
-                                scoreLCS[i][j].dir = 'cross'
-                            }
-                            else{
-                                if(max == scoreLCS[i-1][j].value){
-                                    scoreLCS[i][j].dir = 'top'
-                                }
-                                else {
-                                    scoreLCS[i][j].dir = 'left'
-                                }
-                            }
-                        }
-                        else {
-                            max = Math.max(scoreLCS[i-1][j].value, scoreLCS[i][j-1].value)
-                            scoreLCS[i][j].value = simPnt[i][j]
-                            if(max == scoreLCS[i-1][j].value){
-                                scoreLCS[i][j].value = simPnt[i][j]
-                                scoreLCS[i][j].dir = 'top'
-                            }
-                            else {
-                                scoreLCS[i][j].dir = 'left'
-                            }
-                        }
-                    }
-                }
-            }
-    
-            console.log(scoreLCS)
-            var L = []
-            /*var i = n-1; j = m-1;
-            while(i >= 0 && j >= 0){
-                if(scoreLCS[i][j].dir == 'cross'){
-                    i--
-                    j--
-                    L.push([i, j])
-                }
-                else if(scoreLCS[i][j].dir == 'left'){
-                    j--
-                }
-                else {
-                    i--
-                }
-            }*/
-    
-            for(i = 0; i < n; i++){
-                max = scoreLCS[i][0].value
-                var x = 0, y = 0
-                for(j = 0; j < m; j++){
-                    if(scoreLCS[i][j].dir == 'cross' && max < scoreLCS[i][j].value){
-                        max = scoreLCS[i][j].value
-                        y = i
-                        x = j
-                    }
-                }
-                if(x != 0 && y != 0){
-                    console.log(y, x, max)
-                    L.push([y-1, x-1])
-                }
-            }
-    
-            console.log(L)
-            return L
         }
+
+        for(i = 1; i < n; i++){
+            for(j = 1; j < m; j++){
+                var dist = tools.distance(path1[i-1], path2[j-1])
+                if(dist < delta){
+                    M[i][j].sim = 1 - dist/delta
+                }
+            }
+        }
+
+        for(i = 0; i < n; i++){
+            for(j = 0; j < m; j++){
+                if(i == 0){
+                    M[i][j].cost = 0
+                    M[i][j].dir = 'left'
+                }
+                else if(j == 0){
+                    M[i][j].cost = 0
+                    M[i][j].dir = 'top'
+                }
+                else{
+                    M[i][j].cost = Math.max(M[i-1][j-1].cost + M[i][j].sim, M[i-1][j].cost, M[i][j-1].cost)
+                    if(M[i][j].cost != 0 && ((M[i][j].cost != M[i-1][j].cost) && (M[i][j].cost != M[i][j-1].cost))){
+                        switch(M[i][j].cost){
+                            case M[i-1][j-1].cost + M[i][j].sim: M[i][j].dir = 'cross'; if(M[i][j-1].dir == 'cross' && M[i-1][j-1].dir == 'cross'){M[i][j-1].dir = 'top'}; break;
+                            case M[i-1][j].cost: M[i][j].dir = 'top'; break;
+                            case M[i][j-1].cost: M[i][j].dir = 'left'; break;
+                        }
+                    }
+                    else {
+                        M[i][j].dir = 'null'
+                    }
+                }
+            }
+        }
+
+        var L = []
+        var tablo = document.getElementById('table')
+        tablo.innerHTML = ""
+        var table = document.createElement('TABLE')
+        for(i = 0; i < n; i++){
+            var tr = document.createElement('TR')
+            for(j = 0; j < m; j++){
+                var td = document.createElement('TD')
+                td.style = "background-color: rgb(" + tools.normalize(M[i][j].cost, 0, M[n-1][m-1].cost) + ",0,0);"
+                td.innerText = M[i][j].sim.toFixed(2) + '/' + M[i][j].cost.toFixed(2) + '/' + M[i][j].dir
+                tr.appendChild(td)
+                if(M[i][j].dir == 'cross'){
+                    L.push([i-1, j-1])
+                    td.style = "background-color: rgb(0,255,0);"
+                }
+            }
+            table.appendChild(tr)
+        }
+        tablo.appendChild(table)
+        tablo.className = "table table-white"
+
+
+        console.log(M)
+
+        return L
     }
 
     function carcount(path, beginCoords, endCoords, beginTime, endTime, maxTime, disTol){
